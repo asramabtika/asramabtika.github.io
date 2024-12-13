@@ -1,0 +1,997 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asrama Bhineka Tunggal Ika</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f4f4f4;
+            color: #444;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #003366;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            font-size: 2.5rem;
+            font-weight: bold;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #cc0000;
+            padding: 10px 0;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 20px;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        section {
+            padding: 20px;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        h1, h2 {
+            color: #cc0000;
+        }
+        .schedule {
+            border: 1px solid #cccccc;
+            border-radius: 5px;
+            padding: 15px;
+            margin-bottom: 20px;
+            background-color: white;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        table, th, td {
+            border: 1px solid #cccccc;
+        }
+        th, td {
+            padding: 10px;
+            text-align: center;
+        }
+        th {
+            background-color: #003366;
+            color: white;
+        }
+        .calendar {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            gap: 10px;
+        }
+        .calendar div {
+            border: 1px solid #cccccc;
+            padding: 10px;
+            text-align: center;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+        .calendar .date {
+            font-size: 0.9rem;
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header>
+    Asrama Bhineka Tunggal Ika
+</header>
+
+<nav>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#schedule">Schedule</a>
+    <a href="#contact">Contact</a>
+</nav>
+
+<section id="about" class="container">
+    <h2>About Us</h2>
+    <p>"Asrama Bhineka Tunggal Ika yang dikenal dengan nama Asrama Btika berdiri sejak 27 September 1958 di Surabaya. Dengan berbagai fasilitas dan kegiatan yang disediakan didukung dengan hubungan kekeluargaan yang erat membantu penghuni untuk menjadi versi terbaik dari dirinya."</p>
+    <p>
+        <strong>Alamat:</strong> Jl. Raya Mulyosari No.370, Mulyorejo, Kec. Mulyorejo, Surabaya, Jawa Timur 60115<br>
+        <strong>Telepon:</strong> 0851-5653-9430<br>
+        <strong>Jam:</strong> Tutup ⋅ Buka pukul 08.00<br>
+        <strong>Provinsi:</strong> Jawa Timur<br>
+        <strong>Industry:</strong> Human Resources Services<br>
+        <strong>Company size:</strong> 2-10 employees<br>
+        <strong>Headquarters:</strong> Surabaya, Jawa Timur<br>
+        <strong>Founded:</strong> 1958
+    </p>
+</section>
+
+<section id="home" class="container">
+    <h2>Welcome to Asrama Btika</h2>
+    <p>Explore the facilities and schedules designed to help our residents achieve their best.</p>
+</section>
+
+<section id="schedule" class="container">
+    <h2>Schedule</h2>
+
+    <div class="schedule">
+        <h3>Piket Pagi</h3>
+        <div class="calendar">
+            <!-- Repeat for 30 days -->
+            <div class="date">1 - Name<br><input type="checkbox"></div>
+            <div class="date">2 - Name<br><input type="checkbox"></div>
+            <div class="date">3 - Name<br><input type="checkbox"></div>
+            <div class="date">4 - Name<br><input type="checkbox"></div>
+            <div class="date">5 - Name<br><input type="checkbox"></div>
+            <div class="date">6 - Name<br><input type="checkbox"></div>
+            <div class="date">7 - Name<br><input type="checkbox"></div>
+            <div class="date">8 - Name<br><input type="checkbox"></div>
+            <div class="date">9 - Name<br><input type="checkbox"></div>
+            <div class="date">10 - Name<br><input type="checkbox"></div>
+            <div class="date">11 - Name<br><input type="checkbox"></div>
+            <div class="date">12 - Name<br><input type="checkbox"></div>
+            <div class="date">13 - Name<br><input type="checkbox"></div>
+            <div class="date">14 - Name<br><input type="checkbox"></div>
+            <div class="date">15 - Name<br><input type="checkbox"></div>
+            <div class="date">16 - Name<br><input type="checkbox"></div>
+            <div class="date">17 - Name<br><input type="checkbox"></div>
+            <div class="date">18 - Name<br><input type="checkbox"></div>
+            <div class="date">19 - Name<br><input type="checkbox"></div>
+            <div class="date">20 - Name<br><input type="checkbox"></div>
+            <div class="date">21 - Name<br><input type="checkbox"></div>
+            <div class="date">22 - Name<br><input type="checkbox"></div>
+            <div class="date">23 - Name<br><input type="checkbox"></div>
+            <div class="date">24 - Name<br><input type="checkbox"></div>
+            <div class="date">25 - Name<br><input type="checkbox"></div>
+            <div class="date">26 - Name<br><input type="checkbox"></div>
+            <div class="date">27 - Name<br><input type="checkbox"></div>
+            <div class="date">28 - Name<br><input type="checkbox"></div>
+            <div class="date">29 - Name<br><input type="checkbox"></div>
+            <div class="date">30 - Name<br><input type="checkbox"></div>
+        </div>
+    </div>
+
+    <div class="schedule">
+        <h3>Piket Keamanan</h3>
+        <div class="calendar">
+            <!-- Repeat for 30 days -->
+            <div class="date">1 - Name<br><input type="checkbox"></div>
+            <div class="date">2 - Name<br><input type="checkbox"></div>
+            <div class="date">3 - Name<br><input type="checkbox"></div>
+            <div class="date">4 - Name<br><input type="checkbox"></div>
+            <div class="date">5 - Name<br><input type="checkbox"></div>
+            <div class="date">6 - Name<br><input type="checkbox"></div>
+            <div class="date">7 - Name<br><input type="checkbox"></div>
+            <div class="date">8 - Name<br><input type="checkbox"></div>
+            <div class="date">9 - Name<br><input type="checkbox"></div>
+            <div class="date">10 - Name<br><input type="checkbox"></div>
+            <div class="date">11 - Name<br><input type="checkbox"></div>
+            <div class="date">12 - Name<br><input type="checkbox"></div>
+            <div class="date">13 - Name<br><input type="checkbox"></div>
+            <div class="date">14 - Name<br><input type="checkbox"></div>
+            <div class="date">15 - Name<br><input type="checkbox"></div>
+            <div class="date">16 - Name<br><input type="checkbox"></div>
+            <div class="date">17 - Name<br><input type="checkbox"></div>
+            <div class="date">18 - Name<br><input type="checkbox"></div>
+            <div class="date">19 - Name<br><input type="checkbox"></div>
+            <div class="date">20 - Name<br><input type="checkbox"></div>
+            <div class="date">21 - Name<br><input type="checkbox"></div>
+            <div class="date">22 - Name<br><input type="checkbox"></div>
+            <div class="date">23 - Name<br><input type="checkbox"></div>
+            <div class="date">24 - Name<br><input type="checkbox"></div>
+            <div class="date">25 - Name<br><input type="checkbox"></div>
+            <div class="date">26 - Name<br><input type="checkbox"></div>
+            <div class="date">27 - Name<br><input type="checkbox"></div>
+            <div class="date">28 - Name<br><input type="checkbox"></div>
+            <div class="date">29 - Name<br><input type="checkbox"></div>
+            <div class="date">30 - Name<br><input type="checkbox"></div>
+        </div>
+    </div>
+
+    <div class="schedule">
+        <h3>Piket Lauk</h3>
+        <table>
+            <tr>
+                <th>Day</th>
+                <th>Morning</th>
+                <th>Evening</th>
+            </tr>
+            <tr>
+                <td>Monday</td>
+                <td>Name 1, Name 2</td>
+                <td>Name 3, Name 4</td>
+            </tr>
+            <tr>
+                <td>Tuesday</td>
+                <td>Name 5, Name 6</td>
+                <td>Name 7, Name 8</td>
+            </tr>
+            <tr>
+                <td>Wednesday</td>
+                <td>Name 9, Name 10</td>
+                <td>Name 11, Name 12</td>
+            </tr>
+            <tr>
+                <td>Thursday</td>
+                <td>Name 13, Name 14</td>
+                <td>Name 15, Name 16</td>
+            </tr>
+            <tr>
+                <td>Friday</td>
+                <td>Name 17, Name 18</td>
+                <td>Name 19, Name 20</td>
+            </tr>
+            <tr>
+                <td>Saturday</td>
+                <td>Name 21, Name 22</td>
+                <td>Name 23, Name 24</td>
+            </tr>
+            <tr>
+                <td>Sunday</td>
+                <td>Name 25, Name 26</td>
+                <td>Name 27, Name 28</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="schedule">
+        <h3>Piket Kerohanian</h3>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>Task / Day</th>
+                    <th>Senin (1)</th>
+                    <th>Selasa (2)</th>
+                    <th>Rabu (3)</th>
+                    <th>Kamis (4)</th>
+                    <th>Jumat (5)</th>
+                    <th>Sabtu (6)</th>
+                    <th>Minggu (7)</th>
+                </tr>
+                <tr>
+                    <th></th>
+                    <th>Day 1</th>
+                    <th>Day 2</th>
+                    <th>Day 3</th>
+                    <th>Day 4</th>
+                    <th>Day 5</th>
+                    <th>Day 6</th>
+                    <th>Day 7</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Tadarus Task (Day 1 to Day 7) -->
+                <tr>
+                    <td>Tadarus</td>
+                    <td><input type="checkbox"> Name 1</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Azan Subuh</td>
+                    <td><input type="checkbox"> Name 1</td>
+                    <td><input type="checkbox"> Name 2</td>
+                    <td><input type="checkbox"> Name 3</td>
+                    <td><input type="checkbox"> Name 4</td>
+                    <td><input type="checkbox"> Name 5</td>
+                    <td><input type="checkbox"> Name 6</td>
+                    <td><input type="checkbox"> Name 7</td>
+                </tr>
+                <tr>
+                    <td>Magrib</td>
+                    <td><input type="checkbox"> Name 1</td>
+                    <td><input type="checkbox"> Name 2</td>
+                    <td><input type="checkbox"> Name 3</td>
+                    <td><input type="checkbox"> Name 4</td>
+                    <td><input type="checkbox"> Name 5</td>
+                    <td><input type="checkbox"> Name 6</td>
+                    <td><input type="checkbox"> Name 7</td>
+                </tr>
+                <tr>
+                    <td>Isya</td>
+                    <td><input type="checkbox"> Name 1</td>
+                    <td><input type="checkbox"> Name 2</td>
+                    <td><input type="checkbox"> Name 3</td>
+                    <td><input type="checkbox"> Name 4</td>
+                    <td><input type="checkbox"> Name 5</td>
+                    <td><input type="checkbox"> Name 6</td>
+                    <td><input type="checkbox"> Name 7</td>
+                </tr>
+    
+                <!-- Add a separator between Day 1-7 and Day 8-14 -->
+                <tr><td colspan="8" style="height: 10px; background-color: #f0f0f0;"></td></tr>
+    
+                <!-- Day 8 to Day 14 -->
+                <tr>
+                    <th>Task / Day</th>
+                    <th>Senin (8)</th>
+                    <th>Selasa (9)</th>
+                    <th>Rabu (10)</th>
+                    <th>Kamis (11)</th>
+                    <th>Jumat (12)</th>
+                    <th>Sabtu (13)</th>
+                    <th>Minggu (14)</th>
+                </tr>
+                <tr>
+                    <th></th>
+                    <th>Day 8</th>
+                    <th>Day 9</th>
+                    <th>Day 10</th>
+                    <th>Day 11</th>
+                    <th>Day 12</th>
+                    <th>Day 13</th>
+                    <th>Day 14</th>
+                </tr>
+                <!-- Tadarus Task (Day 8 to Day 14) -->
+                <tr>
+                    <td>Tadarus</td>
+                    <td><input type="checkbox"> Name 8</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Azan Subuh</td>
+                    <td><input type="checkbox"> Name 8</td>
+                    <td><input type="checkbox"> Name 9</td>
+                    <td><input type="checkbox"> Name 10</td>
+                    <td><input type="checkbox"> Name 11</td>
+                    <td><input type="checkbox"> Name 12</td>
+                    <td><input type="checkbox"> Name 13</td>
+                    <td><input type="checkbox"> Name 14</td>
+                </tr>
+                <tr>
+                    <td>Magrib</td>
+                    <td><input type="checkbox"> Name 8</td>
+                    <td><input type="checkbox"> Name 9</td>
+                    <td><input type="checkbox"> Name 10</td>
+                    <td><input type="checkbox"> Name 11</td>
+                    <td><input type="checkbox"> Name 12</td>
+                    <td><input type="checkbox"> Name 13</td>
+                    <td><input type="checkbox"> Name 14</td>
+                </tr>
+                <tr>
+                    <td>Isya</td>
+                    <td><input type="checkbox"> Name 8</td>
+                    <td><input type="checkbox"> Name 9</td>
+                    <td><input type="checkbox"> Name 10</td>
+                    <td><input type="checkbox"> Name 11</td>
+                    <td><input type="checkbox"> Name 12</td>
+                    <td><input type="checkbox"> Name 13</td>
+                    <td><input type="checkbox"> Name 14</td>
+                </tr>
+                <!-- Add a separator between Day 1-7 and Day 8-14 -->
+                <tr><td colspan="8" style="height: 10px; background-color: #f0f0f0;"></td></tr>
+    
+                <!-- Day 8 to Day 14 -->
+                <tr>
+                    <th>Task / Day</th>
+                    <th>Senin (8)</th>
+                    <th>Selasa (9)</th>
+                    <th>Rabu (10)</th>
+                    <th>Kamis (11)</th>
+                    <th>Jumat (12)</th>
+                    <th>Sabtu (13)</th>
+                    <th>Minggu (14)</th>
+                </tr>
+                <tr>
+                    <th></th>
+                    <th>Day 8</th>
+                    <th>Day 9</th>
+                    <th>Day 10</th>
+                    <th>Day 11</th>
+                    <th>Day 12</th>
+                    <th>Day 13</th>
+                    <th>Day 14</th>
+                </tr>
+                <!-- Tadarus Task (Day 8 to Day 14) -->
+                <tr>
+                    <td>Tadarus</td>
+                    <td><input type="checkbox"> Name 8</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Azan Subuh</td>
+                    <td><input type="checkbox"> Name 8</td>
+                    <td><input type="checkbox"> Name 9</td>
+                    <td><input type="checkbox"> Name 10</td>
+                    <td><input type="checkbox"> Name 11</td>
+                    <td><input type="checkbox"> Name 12</td>
+                    <td><input type="checkbox"> Name 13</td>
+                    <td><input type="checkbox"> Name 14</td>
+                </tr>
+                <tr>
+                    <td>Magrib</td>
+                    <td><input type="checkbox"> Name 8</td>
+                    <td><input type="checkbox"> Name 9</td>
+                    <td><input type="checkbox"> Name 10</td>
+                    <td><input type="checkbox"> Name 11</td>
+                    <td><input type="checkbox"> Name 12</td>
+                    <td><input type="checkbox"> Name 13</td>
+                    <td><input type="checkbox"> Name 14</td>
+                </tr>
+                <tr>
+                    <td>Isya</td>
+                    <td><input type="checkbox"> Name 8</td>
+                    <td><input type="checkbox"> Name 9</td>
+                    <td><input type="checkbox"> Name 10</td>
+                    <td><input type="checkbox"> Name 11</td>
+                    <td><input type="checkbox"> Name 12</td>
+                    <td><input type="checkbox"> Name 13</td>
+                    <td><input type="checkbox"> Name 14</td>
+                </tr>
+                <!-- Add a separator between Day 1-7 and Day 8-14 -->
+                <tr><td colspan="8" style="height: 10px; background-color: #f0f0f0;"></td></tr>
+    
+                <!-- Day 8 to Day 14 -->
+                <tr>
+                    <th>Task / Day</th>
+                    <th>Senin (8)</th>
+                    <th>Selasa (9)</th>
+                    <th>Rabu (10)</th>
+                    <th>Kamis (11)</th>
+                    <th>Jumat (12)</th>
+                    <th>Sabtu (13)</th>
+                    <th>Minggu (14)</th>
+                </tr>
+                <tr>
+                    <th></th>
+                    <th>Day 8</th>
+                    <th>Day 9</th>
+                    <th>Day 10</th>
+                    <th>Day 11</th>
+                    <th>Day 12</th>
+                    <th>Day 13</th>
+                    <th>Day 14</th>
+                </tr>
+                <!-- Tadarus Task (Day 8 to Day 14) -->
+                <tr>
+                    <td>Tadarus</td>
+                    <td><input type="checkbox"> Name 8</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Azan Subuh</td>
+                    <td><input type="checkbox"> Name 8</td>
+                    <td><input type="checkbox"> Name 9</td>
+                    <td><input type="checkbox"> Name 10</td>
+                    <td><input type="checkbox"> Name 11</td>
+                    <td><input type="checkbox"> Name 12</td>
+                    <td><input type="checkbox"> Name 13</td>
+                    <td><input type="checkbox"> Name 14</td>
+                </tr>
+                <tr>
+                    <td>Magrib</td>
+                    <td><input type="checkbox"> Name 8</td>
+                    <td><input type="checkbox"> Name 9</td>
+                    <td><input type="checkbox"> Name 10</td>
+                    <td><input type="checkbox"> Name 11</td>
+                    <td><input type="checkbox"> Name 12</td>
+                    <td><input type="checkbox"> Name 13</td>
+                    <td><input type="checkbox"> Name 14</td>
+                </tr>
+                <tr>
+                    <td>Isya</td>
+                    <td><input type="checkbox"> Name 8</td>
+                    <td><input type="checkbox"> Name 9</td>
+                    <td><input type="checkbox"> Name 10</td>
+                    <td><input type="checkbox"> Name 11</td>
+                    <td><input type="checkbox"> Name 12</td>
+                    <td><input type="checkbox"> Name 13</td>
+                    <td><input type="checkbox"> Name 14</td>
+                </tr>                                
+            </tbody>
+        </table>
+    </div>
+    
+
+    <div class="schedule">
+        <h3>Piket Galon</h3>
+        <table>
+            <tr>
+                <th>Name</th>
+                <th>1</th>
+                <th>2</th>
+                <th>3</th>
+                <th>4</th>
+                <th>5</th>
+            </tr>
+            <!-- Repeat for 30 names -->
+            <tr>
+                <td>Name 1</td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+            </tr>
+            <tr>
+                <td>Name 2</td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+            </tr>
+            <tr>
+                <td>Name 3</td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+            </tr>
+            <tr>
+                <td>Name 4</td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+            </tr>
+            <tr>
+                <td>Name 5</td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+            </tr>
+            <tr>
+                <td>Name 6</td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+            </tr>
+            <tr>
+                <td>Name 7</td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+            </tr>
+            <tr>
+                <td>Name 8</td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+            </tr>
+            <tr>
+                <td>Name 9</td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+            </tr>
+            <tr>
+                <td>Name 10</td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+            </tr>
+            <tr>
+                <td>Name 11</td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+            </tr>
+            <tr>
+                <td>Name 12</td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+            </tr>
+            <tr>
+                <td>Name 13</td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+            </tr>
+            <tr>
+                <td>Name 14</td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+            </tr>
+            <tr>
+                <td>Name 15</td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+            </tr>
+            <tr>
+                <td>Name 16</td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+            </tr>
+            <tr>
+                <td>Name 17</td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+            </tr>
+            <tr>
+                <td>Name 18</td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+            </tr>
+            <tr>
+                <td>Name 19</td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+            </tr>
+            <tr>
+                <td>Name 20</td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+            </tr>
+            <tr>
+                <td>Name 21</td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+            </tr>
+            <tr>
+                <td>Name 22</td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+            </tr>
+            <tr>
+                <td>Name 23</td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+            </tr>
+            <tr>
+                <td>Name 24</td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+            </tr>
+            <tr>
+                <td>Name 25</td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+            </tr>
+            <tr>
+                <td>Name 26</td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+            </tr>
+            <tr>
+                <td>Name 27</td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+            </tr>
+            <tr>
+                <td>Name 28</td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+            </tr>                                                      
+        </table>
+    </div>
+
+    <div class="schedule">
+        <h3>Piket Beras</h3>
+        <table>
+            <tr>
+                <th>Name</th>
+                <th>1</th>
+                <th>2</th>
+                <th>3</th>
+                <th>4</th>
+                <th>5</th>
+            </tr>
+            <!-- Repeat for 30 names -->
+            <tr>
+                <td>Name 1</td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+            </tr>
+            <tr>
+                <td>Name 2</td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+            </tr>
+            <tr>
+                <td>Name 3</td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+            </tr>
+            <tr>
+                <td>Name 4</td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+            </tr>
+            <tr>
+                <td>Name 5</td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+            </tr>
+            <tr>
+                <td>Name 6</td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+            </tr>
+            <tr>
+                <td>Name 7</td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+            </tr>
+            <tr>
+                <td>Name 8</td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+            </tr>
+            <tr>
+                <td>Name 9</td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+            </tr>
+            <tr>
+                <td>Name 10</td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+            </tr>
+            <tr>
+                <td>Name 11</td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+            </tr>
+            <tr>
+                <td>Name 12</td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+            </tr>
+            <tr>
+                <td>Name 13</td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+            </tr>
+            <tr>
+                <td>Name 14</td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+            </tr>
+            <tr>
+                <td>Name 15</td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+            </tr>
+            <tr>
+                <td>Name 16</td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+            </tr>
+            <tr>
+                <td>Name 17</td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+            </tr>
+            <tr>
+                <td>Name 18</td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+            </tr>
+            <tr>
+                <td>Name 19</td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+            </tr>
+            <tr>
+                <td>Name 20</td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+            </tr>
+            <tr>
+                <td>Name 21</td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+            </tr>
+            <tr>
+                <td>Name 22</td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+            </tr>
+            <tr>
+                <td>Name 23</td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+            </tr>
+            <tr>
+                <td>Name 24</td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+            </tr>
+            <tr>
+                <td>Name 25</td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+            </tr>
+            <tr>
+                <td>Name 26</td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+            </tr>
+            <tr>
+                <td>Name 27</td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+            </tr>
+            <tr>
+                <td>Name 28</td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+            </tr>                                                      
+        </table>
+    </div>
+</section>
+
+</body>
+</html>

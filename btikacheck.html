@@ -4,15 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Asrama Bhineka Tunggal Ika</title>
-    <style>
+    <style>        
         body {
             font-family: 'Poppins', sans-serif;
-            background-color: #f4f4f4;
+            background-color: #d3d3d3;
             color: #444;
             margin: 0;
             padding: 0;
         }
         header {
+            font-family: 'Poppins', sans-serif;
             background-color: #003366;
             color: white;
             padding: 20px;
@@ -20,6 +21,46 @@
             font-size: 2.5rem;
             font-weight: bold;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        header h1 {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+            letter-spacing: 2px;
+        }
+        h1, h2{
+            font-family: 'Poppins', sans-serif;
+            letter-spacing: 1.5px; /* Jarak antar huruf */
+            color: #222; /* Warna teks lebih gelap */
+            margin-bottom: 10px;
+        }
+        h3, h4, p {
+            font-family: 'Poppins', sans-serif;
+            letter-spacing: 0.5px; /* Jarak antar huruf */
+            color: #222; /* Warna teks lebih gelap */
+            margin-bottom: 10px;
+            
+        }
+
+        h1 {
+            font-size: 2.5em; /* Ukuran terbesar */
+            font-weight: 700;
+            font-weight: bold;
+        }
+
+        h2 {
+            font-size: 2em; /* Ukuran sedang */
+            font-weight: 600;
+            font-weight: bold;
+        }
+
+        h3 {
+            font-size: 1.5em; /* Ukuran terkecil */
+            font-weight: 500;
+            font-weight: bold;
+        }
+        header img {
+            height: 50px; /* Sesuaikan ukuran logo */
+            margin-right: 15px;
         }
         nav {
             display: flex;
@@ -29,6 +70,7 @@
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
         nav a {
+            font-family: 'Poppins', sans-serif;
             color: white;
             text-decoration: none;
             margin: 0 20px;
@@ -45,15 +87,18 @@
             max-width: 1200px;
             margin: 0 auto;
         }
-        h1, h2 {
-            color: #cc0000;
+        h1, h2, h3 {
+            color: #003366;
+        }
+        h3, h4 {
+            color: #8b0000;
         }
         .schedule {
-            border: 1px solid #cccccc;
+            border: 1px solid #a8a3a3;
             border-radius: 5px;
             padding: 15px;
             margin-bottom: 20px;
-            background-color: white;
+            background-color: rgb(231, 227, 227);
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
         table {
@@ -62,7 +107,11 @@
             margin-bottom: 20px;
         }
         table, th, td {
-            border: 1px solid #cccccc;
+            border: 1px solid #b8b7b7;
+            font-family: 'Poppins', sans-serif;
+            letter-spacing: 0.5px; /* Jarak antar huruf */
+            color: #222; /* Warna teks lebih gelap */
+            margin-bottom: 10px;
         }
         th, td {
             padding: 10px;
@@ -78,21 +127,65 @@
             gap: 10px;
         }
         .calendar div {
-            border: 1px solid #cccccc;
+            border: 1px solid #969696;
             padding: 10px;
             text-align: center;
             border-radius: 5px;
-            background-color: #f9f9f9;
+            background-color: #dee1e7;
         }
         .calendar .date {
             font-size: 0.9rem;
         }
+        /* Umum untuk seluruh halaman */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Setelan untuk kalender atau daftar piket */
+        .schedule {
+            padding: 20px;
+            background-color: #e5e5e5;
+        }
+
+        .calendar {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr); /* 7 kolom */
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        /* Tampilan masing-masing piket */
+        .date {
+            background-color: #dcdcdc;
+            padding: 15px;
+            text-align: center;
+            border-radius: 8px;
+            box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+            word-wrap: break-word;
+        }
+
+        /* Responsif untuk perangkat tablet */
+        @media (max-width: 768px) {
+            .calendar {
+                grid-template-columns: repeat(4, 1fr); /* 4 kolom pada tablet */
+            }
+
+            .date {
+                font-size: 14px;
+                padding: 10px;
+            }
+        }
+
     </style>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
 
 <header>
+    <img src="logo.png"style="position: absolute; top: 10px; left: 20px; height: 50px;">
     Asrama Bhineka Tunggal Ika
 </header>
 
@@ -102,15 +195,13 @@
     <a href="#schedule">Schedule</a>
     <a href="#contact">Contact</a>
 </nav>
-
 <section id="about" class="container">
     <h2>About Us</h2>
-    <p>"Asrama Bhineka Tunggal Ika yang dikenal dengan nama Asrama Btika berdiri sejak 27 September 1958 di Surabaya. Dengan berbagai fasilitas dan kegiatan yang disediakan didukung dengan hubungan kekeluargaan yang erat membantu penghuni untuk menjadi versi terbaik dari dirinya."</p>
+    <p><em>"Asrama Bhineka Tunggal Ika yang dikenal dengan nama Asrama Btika berdiri sejak 27 September 1958 di Surabaya. Dengan berbagai fasilitas dan kegiatan yang disediakan didukung dengan hubungan kekeluargaan yang erat membantu penghuni untuk menjadi versi terbaik dari dirinya."</em></p>
     <p>
-        <strong>Alamat:</strong> Jl. Raya Mulyosari No.370, Mulyorejo, Kec. Mulyorejo, Surabaya, Jawa Timur 60115<br>
-        <strong>Telepon:</strong> 0851-5653-9430<br>
-        <strong>Jam:</strong> Tutup ⋅ Buka pukul 08.00<br>
-        <strong>Provinsi:</strong> Jawa Timur<br>
+        <strong>Address:</strong> Jl. Raya Mulyosari No.370, Mulyorejo, Kec. Mulyorejo, Surabaya, Jawa Timur 60115<br>
+        <strong>Phone:</strong> 0851-5653-9430<br>
+        <strong>Open: </strong>8 AM - 9 PM<br>
         <strong>Industry:</strong> Human Resources Services<br>
         <strong>Company size:</strong> 2-10 employees<br>
         <strong>Headquarters:</strong> Surabaya, Jawa Timur<br>
@@ -126,124 +217,197 @@
 <section id="schedule" class="container">
     <h2>Schedule</h2>
 
-    <div class="schedule">
-        <h3>Piket Pagi</h3>
-        <div class="calendar">
-            <!-- Repeat for 30 days -->
-            <div class="date">1 - Name<br><input type="checkbox"></div>
-            <div class="date">2 - Name<br><input type="checkbox"></div>
-            <div class="date">3 - Name<br><input type="checkbox"></div>
-            <div class="date">4 - Name<br><input type="checkbox"></div>
-            <div class="date">5 - Name<br><input type="checkbox"></div>
-            <div class="date">6 - Name<br><input type="checkbox"></div>
-            <div class="date">7 - Name<br><input type="checkbox"></div>
-            <div class="date">8 - Name<br><input type="checkbox"></div>
-            <div class="date">9 - Name<br><input type="checkbox"></div>
-            <div class="date">10 - Name<br><input type="checkbox"></div>
-            <div class="date">11 - Name<br><input type="checkbox"></div>
-            <div class="date">12 - Name<br><input type="checkbox"></div>
-            <div class="date">13 - Name<br><input type="checkbox"></div>
-            <div class="date">14 - Name<br><input type="checkbox"></div>
-            <div class="date">15 - Name<br><input type="checkbox"></div>
-            <div class="date">16 - Name<br><input type="checkbox"></div>
-            <div class="date">17 - Name<br><input type="checkbox"></div>
-            <div class="date">18 - Name<br><input type="checkbox"></div>
-            <div class="date">19 - Name<br><input type="checkbox"></div>
-            <div class="date">20 - Name<br><input type="checkbox"></div>
-            <div class="date">21 - Name<br><input type="checkbox"></div>
-            <div class="date">22 - Name<br><input type="checkbox"></div>
-            <div class="date">23 - Name<br><input type="checkbox"></div>
-            <div class="date">24 - Name<br><input type="checkbox"></div>
-            <div class="date">25 - Name<br><input type="checkbox"></div>
-            <div class="date">26 - Name<br><input type="checkbox"></div>
-            <div class="date">27 - Name<br><input type="checkbox"></div>
-            <div class="date">28 - Name<br><input type="checkbox"></div>
-            <div class="date">29 - Name<br><input type="checkbox"></div>
-            <div class="date">30 - Name<br><input type="checkbox"></div>
-        </div>
+<!-- Piket Pagi -->
+<div class="schedule">
+    <h3>Piket Pagi</h3>
+    <div class="calendar">
+        <div class="date"><br><input type="checkbox" id="checkbox-pagi1"></div>
+        <div class="date"><br><input type="checkbox" id="checkbox-pagi2"></div>
+        <div class="date">3 - Gagah<br><input type="checkbox" id="checkbox-pagi3"></div>
+        <div class="date">4 - Irvan<br><input type="checkbox" id="checkbox-pagi4"></div>
+        <div class="date">5 - Joshua<br><input type="checkbox" id="checkbox-pagi5"></div>
+        <div class="date">6 - Firdaus<br><input type="checkbox" id="checkbox-pagi6"></div>
+        <div class="date">7 - Ubai<br><input type="checkbox" id="checkbox-pagi7"></div>
+        <div class="date">8 - Dhafin<br><input type="checkbox" id="checkbox-pagi8"></div>
+        <div class="date">9 - Ade<br><input type="checkbox" id="checkbox-pagi9"></div>
+        <div class="date">10 - Alwi<br><input type="checkbox" id="checkbox-pagi10"></div>
+        <div class="date">11 - Wilbert<br><input type="checkbox" id="checkbox-pagi11"></div>
+        <div class="date">12 - Yusuf<br><input type="checkbox" id="checkbox-pagi12"></div>
+        <div class="date">13 - Mario<br><input type="checkbox" id="checkbox-pagi13"></div>
+        <div class="date">14 - Aryo<br><input type="checkbox" id="checkbox-pagi14"></div>
+        <div class="date">15 - Kevin<br><input type="checkbox" id="checkbox-pagi15"></div>
+        <div class="date">16 - Soleh<br><input type="checkbox" id="checkbox-pagi16"></div>
+        <div class="date">17 - Ilzam<br><input type="checkbox" id="checkbox-pagi17"></div>
+        <div class="date">18 - Pradana<br><input type="checkbox" id="checkbox-pagi18"></div>
+        <div class="date">19 - Gagah<br><input type="checkbox" id="checkbox-pagi19"></div>
+        <div class="date">20 - irvan<br><input type="checkbox" id="checkbox-pagi20"></div>
+        <div class="date">21 - Joshua<br><input type="checkbox" id="checkbox-pagi21"></div>
+        <div class="date"><br><input type="checkbox" id="checkbox-pagi22"></div>
+        <div class="date"><br><input type="checkbox" id="checkbox-pagi23"></div>
+        <div class="date"><br><input type="checkbox" id="checkbox-pagi24"></div>
+        <div class="date"><br><input type="checkbox" id="checkbox-pagi25"></div>
+        <div class="date"><br><input type="checkbox" id="checkbox-pagi26"></div>
+        <div class="date"><br><input type="checkbox" id="checkbox-pagi27"></div>
+        <div class="date"><br><input type="checkbox" id="checkbox-pagi28"></div>
+        <div class="date"><br><input type="checkbox" id="checkbox-pagi29"></div>
+        <div class="date"><br><input type="checkbox" id="checkbox-pagi30"></div>
     </div>
+    <h4>Tupoksi :</h4>
+    <p>1. <strong>Piket dilakukan sebelum pukul 06.00 WIB</strong>
+    <p>2. Membuka pagar dan mencantol gembok dengan terkunci dan
+        meletakkan pada ruang TV lt4, mematikan seluruh lampu LT. 1 - 6
+    <p>3. Diperkenankan menukar jadwal 1x dengan jumlah piket yang sama (tidak boleh terus
+        mengambil jatah piket yang lain), sesuai kesepakatan satu sama lain
+    <p>4. Hasil pekerjaan beserta catatan difoto dan dilaporkan pada grup sesuai Template
+        Jarkom yang telah ditentukan
+    <p>5. Pekerjaan calon anggota sebagai penilaian
+    <p>6. <strong>TTD maksimal h+1 piket</strong>
+    </p>    
+</div>
+
+    
 
     <div class="schedule">
         <h3>Piket Keamanan</h3>
         <div class="calendar">
-            <!-- Repeat for 30 days -->
-            <div class="date">1 - Name<br><input type="checkbox"></div>
-            <div class="date">2 - Name<br><input type="checkbox"></div>
-            <div class="date">3 - Name<br><input type="checkbox"></div>
-            <div class="date">4 - Name<br><input type="checkbox"></div>
-            <div class="date">5 - Name<br><input type="checkbox"></div>
-            <div class="date">6 - Name<br><input type="checkbox"></div>
-            <div class="date">7 - Name<br><input type="checkbox"></div>
-            <div class="date">8 - Name<br><input type="checkbox"></div>
-            <div class="date">9 - Name<br><input type="checkbox"></div>
-            <div class="date">10 - Name<br><input type="checkbox"></div>
-            <div class="date">11 - Name<br><input type="checkbox"></div>
-            <div class="date">12 - Name<br><input type="checkbox"></div>
-            <div class="date">13 - Name<br><input type="checkbox"></div>
-            <div class="date">14 - Name<br><input type="checkbox"></div>
-            <div class="date">15 - Name<br><input type="checkbox"></div>
-            <div class="date">16 - Name<br><input type="checkbox"></div>
-            <div class="date">17 - Name<br><input type="checkbox"></div>
-            <div class="date">18 - Name<br><input type="checkbox"></div>
-            <div class="date">19 - Name<br><input type="checkbox"></div>
-            <div class="date">20 - Name<br><input type="checkbox"></div>
-            <div class="date">21 - Name<br><input type="checkbox"></div>
-            <div class="date">22 - Name<br><input type="checkbox"></div>
-            <div class="date">23 - Name<br><input type="checkbox"></div>
-            <div class="date">24 - Name<br><input type="checkbox"></div>
-            <div class="date">25 - Name<br><input type="checkbox"></div>
-            <div class="date">26 - Name<br><input type="checkbox"></div>
-            <div class="date">27 - Name<br><input type="checkbox"></div>
-            <div class="date">28 - Name<br><input type="checkbox"></div>
-            <div class="date">29 - Name<br><input type="checkbox"></div>
-            <div class="date">30 - Name<br><input type="checkbox"></div>
+            <div class="date"><br><input type="checkbox" id="checkbox-keamanan1"></div>
+            <div class="date">2 - Joshua<br><input type="checkbox" id="checkbox-keamanan2"></div>
+            <div class="date">3 - Firdaus<br><input type="checkbox" id="checkbox-keamanan3"></div>
+            <div class="date">4 - Ubai<br><input type="checkbox" id="checkbox-keamanan4"></div>
+            <div class="date">5 - Dhafin<br><input type="checkbox" id="checkbox-keamanan5"></div>
+            <div class="date">6 - Ade<br><input type="checkbox" id="checkbox-keamanan6"></div>
+            <div class="date">7 - Alwi<br><input type="checkbox" id="checkbox-keamanan7"></div>
+            <div class="date">8 - Wilbert<br><input type="checkbox" id="checkbox-keamanan8"></div>
+            <div class="date">9 - Yusuf<br><input type="checkbox" id="checkbox-keamanan9"></div>
+            <div class="date">10 - Mario<br><input type="checkbox" id="checkbox-keamanan10"></div>
+            <div class="date">11 - Aryo<br><input type="checkbox" id="checkbox-keamanan11"></div>
+            <div class="date">12 - Kevin<br><input type="checkbox" id="checkbox-keamanan12"></div>
+            <div class="date">13 - Soleh<br><input type="checkbox" id="checkbox-keamanan13"></div>
+            <div class="date">14 - Ilzam<br><input type="checkbox" id="checkbox-keamanan14"></div>
+            <div class="date">15 - Pradana<br><input type="checkbox" id="checkbox-keamanan15"></div>
+            <div class="date">16 - Irvan<br><input type="checkbox" id="checkbox-keamanan16"></div>
+            <div class="date">17 - Gagah<br><input type="checkbox" id="checkbox-keamanan17"></div>
+            <div class="date">18 - Joshua<br><input type="checkbox" id="checkbox-keamanan18"></div>
+            <div class="date">19 - Firdaus<br><input type="checkbox" id="checkbox-keamanan19"></div>
+            <div class="date">20 - Ubai<br><input type="checkbox" id="checkbox-keamanan20"></div>
+            <div class="date">21 - Dhafin<br><input type="checkbox" id="checkbox-keamanan21"></div>
+            <div class="date"><br><input type="checkbox" id="checkbox-keamanan22"></div>
+            <div class="date"><br><input type="checkbox" id="checkbox-keamanan23"></div>
+            <div class="date"><br><input type="checkbox" id="checkbox-keamanan24"></div>
+            <div class="date"><br><input type="checkbox" id="checkbox-keamanan25"></div>
+            <div class="date"><br><input type="checkbox" id="checkbox-keamanan26"></div>
+            <div class="date"><br><input type="checkbox" id="checkbox-keamanan27"></div>
+            <div class="date"><br><input type="checkbox" id="checkbox-keamanan28"></div>
+            <div class="date"><br><input type="checkbox" id="checkbox-keamanan29"></div>
+            <div class="date"><br><input type="checkbox" id="checkbox-keamanan30"></div>
         </div>
+        <h4>Tupoksi :</h4>
+        <p>1. <strong>Piket dilakukan pada pukul 23.00-23.15 WIB</strong>
+        <p>2. Menggembok pagar, mengecek kunci stang setiap motor, mencabut colokan mesin cuci 
+        <p>3. Diperkenankan menukar jadwal 1x dengan jumlah piket yang sama (tidak boleh terus
+            mengambil jatah piket yang lain), sesuai kesepakatan satu sama lain 
+        <p>4. Hasil pekerjaan beserta catatan difoto dan dilaporkan pada grup sesuai Template Jarkom
+            yang telah ditentukan 
+        <p>5. Pekerjaan calon anggota sebagai penilaian
+        <p>- <strong>TTD maksimal h+1 piket</strong>
+        </p>
     </div>
 
     <div class="schedule">
         <h3>Piket Lauk</h3>
         <table>
             <tr>
-                <th>Day</th>
-                <th>Morning</th>
-                <th>Evening</th>
+                <th>Hari</th>
+                <th>Pagi</th>
+                <th>Malam</th>
             </tr>
             <tr>
-                <td>Monday</td>
-                <td>Name 1, Name 2</td>
-                <td>Name 3, Name 4</td>
+                <td>Senin</td>
+                <td>Faisol, Maulana</td>
+                <td>Yusuf, Mario</td>
             </tr>
             <tr>
-                <td>Tuesday</td>
-                <td>Name 5, Name 6</td>
-                <td>Name 7, Name 8</td>
+                <td>Selasa</td>
+                <td>Bryan, Rafiq</td>
+                <td>Kevin, Ilzam</td>
             </tr>
             <tr>
-                <td>Wednesday</td>
-                <td>Name 9, Name 10</td>
-                <td>Name 11, Name 12</td>
+                <td>Rabu</td>
+                <td>Novel, Fito</td>
+                <td>Ade, Pradana</td>
             </tr>
             <tr>
-                <td>Thursday</td>
-                <td>Name 13, Name 14</td>
-                <td>Name 15, Name 16</td>
+                <td>Kamis</td>
+                <td>Farel, Rivaldi</td>
+                <td>Aryo, Irvan</td>
             </tr>
             <tr>
-                <td>Friday</td>
-                <td>Name 17, Name 18</td>
-                <td>Name 19, Name 20</td>
+                <td>Jumat</td>
+                <td>Frans, Abu</td>
+                <td>Soleh, Firdaus</td>
             </tr>
             <tr>
-                <td>Saturday</td>
-                <td>Name 21, Name 22</td>
-                <td>Name 23, Name 24</td>
+                <td>Sabtu</td>
+                <td>Faris, Zidan</td>
+                <td>Alwi, Ubai</td>
             </tr>
             <tr>
-                <td>Sunday</td>
-                <td>Name 25, Name 26</td>
-                <td>Name 27, Name 28</td>
+                <td>Minggu</td>
+                <td>Dhafin, Gagah</td>
+                <td>Joshua, Wilbert</td>
             </tr>
         </table>
+        <h4>Tupoksi :</h4>
+        <p>1. Menyiapkan lauk :
+        <p>- Pagi : 06.00 – 06.30 WIB 
+        <p>- Malam: 18.00 – 18.30 WIB 
+        <p>2. Memasak nasi (2 rice cookers) 
+        <p>3. Membersihkan wadah makanan sebelumnya
+        </p>
+    </div>
+
+    <div class="schedule">
+        <h3>Piket Mingguan</h3>
+        <table>
+            <tr>
+                <th>Week 1</th>
+                <th>Week 2</th>
+                <th>Week 3</th>
+                <th>Week 4</th>
+            </tr>
+            <tr>
+                <td>Aryo</td>
+                <td>Alwi</td>
+                <td>Ade</td>
+                <td>Ilzam</td>
+            </tr>
+            <tr>
+                <td>Joshua</td>
+                <td>Pradana</td>
+                <td>Yusuf</td>
+                <td>Wilbert</td>
+            </tr>
+            <tr>
+                <td>Firdaus</td>
+                <td>Dhafin</td>
+                <td>Ubai</td>
+                <td>Mario</td>
+            </tr>
+            <tr>
+                <td>Irvan</td>
+                <td>Kevin</td>
+                <td>Gagah</td>
+                <td>Soleh</td>
+            </tr>
+        </table>
+        <h4>SOP :</h4>
+        <p>1. Piket dilaksanakan pada hari Sabtu atau Minggu pagi, maksimal sebelum pukul 09.00
+            WIB.            
+        <p>2. Dilaksanakan secara <strong> bersama-sama dalam satu waktu</strong>
+        <p>3. Yang termasuk dalam kebersihan piket mingguan: Lantai 4 (RTV, Balkon,
+            Lorong, Wastafel: piring dan gelas) 
+        <p>4. <strong>Tandatangan maksimal h+1 pelaksanaan</strong>
+        </p>
     </div>
 
     <div class="schedule">
@@ -251,264 +415,251 @@
         <table border="1">
             <thead>
                 <tr>
-                    <th>Task / Day</th>
-                    <th>Senin (1)</th>
-                    <th>Selasa (2)</th>
-                    <th>Rabu (3)</th>
-                    <th>Kamis (4)</th>
-                    <th>Jumat (5)</th>
-                    <th>Sabtu (6)</th>
-                    <th>Minggu (7)</th>
+                    <th>Tugas / Hari</th>
+                    <th>Senin</th>
+                    <th>Selasa</th>
+                    <th>Rabu</th>
+                    <th>Kamis</th>
+                    <th>Jumat</th>
+                    <th>Sabtu</th>
+                    <th>Minggu</th>
                 </tr>
                 <tr>
                     <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
                     <th>Day 1</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Kegiatan Rohani</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>Refleksi</td>
+                </tr>
+                <tr>
+                    <td>Azan Subuh</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Azan Magrib</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Azan Isya</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr><td colspan="8" style="height: 10px; background-color: #f0f0f0;"></td></tr>
+                <tr>
+                    <th>Tugas / Hari</th>
+                    <th>Senin</th>
+                    <th>Selasa</th>
+                    <th>Rabu</th>
+                    <th>Kamis</th>
+                    <th>Jumat</th>
+                    <th>Sabtu</th>
+                    <th>Minggu</th>
+                </tr>
+                <tr>
+                    <th></th>
                     <th>Day 2</th>
                     <th>Day 3</th>
                     <th>Day 4</th>
                     <th>Day 5</th>
                     <th>Day 6</th>
                     <th>Day 7</th>
+                    <th>Day 8</th>
                 </tr>
-            </thead>
-            <tbody>
-                <!-- Tadarus Task (Day 1 to Day 7) -->
                 <tr>
+                    <td>Kegiatan Rohani</td>
                     <td>Tadarus</td>
-                    <td><input type="checkbox"> Name 1</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
+                    <td>Fokus UAS</td>
+                    <td>Fokus UAS</td>
+                    <td>Yasin - Alkahfi</td>
+                    <td>Fokus UAS</td>
+                    <td>Fokus UAS</td>
+                    <td>Refleksi</td>
                 </tr>
                 <tr>
                     <td>Azan Subuh</td>
-                    <td><input type="checkbox"> Name 1</td>
-                    <td><input type="checkbox"> Name 2</td>
-                    <td><input type="checkbox"> Name 3</td>
-                    <td><input type="checkbox"> Name 4</td>
-                    <td><input type="checkbox"> Name 5</td>
-                    <td><input type="checkbox"> Name 6</td>
-                    <td><input type="checkbox"> Name 7</td>
+                    <td></td>
+                    <td><input type="checkbox" id="checkbox-subuh9"> Soleh</td>
+                    <td><input type="checkbox" id="checkbox-subuh10"> Yusuf</td>
+                    <td><input type="checkbox" id="checkbox-subuh11"> Kevin</td>
+                    <td><input type="checkbox" id="checkbox-subuh12"> Aryo</td>
+                    <td><input type="checkbox" id="checkbox-subuh13"> Alwi</td>
+                    <td><input type="checkbox" id="checkbox-subuh14"> Gagah</td>
                 </tr>
                 <tr>
-                    <td>Magrib</td>
-                    <td><input type="checkbox"> Name 1</td>
-                    <td><input type="checkbox"> Name 2</td>
-                    <td><input type="checkbox"> Name 3</td>
-                    <td><input type="checkbox"> Name 4</td>
-                    <td><input type="checkbox"> Name 5</td>
-                    <td><input type="checkbox"> Name 6</td>
-                    <td><input type="checkbox"> Name 7</td>
+                    <td>Azan Magrib</td>
+                    <td><input type="checkbox" id="checkbox-magrib8"> Kevin</td>
+                    <td><input type="checkbox" id="checkbox-magrib9"> Gagah</td>
+                    <td><input type="checkbox" id="checkbox-magrib10"> Aryo</td>
+                    <td><input type="checkbox" id="checkbox-magrib11"> Dhafin</td>
+                    <td><input type="checkbox" id="checkbox-magrib12"> Pradana</td>
+                    <td><input type="checkbox" id="checkbox-magrib13"> Mario</td>
+                    <td><input type="checkbox" id="checkbox-magrib14"> Firdaus</td>
                 </tr>
                 <tr>
-                    <td>Isya</td>
-                    <td><input type="checkbox"> Name 1</td>
-                    <td><input type="checkbox"> Name 2</td>
-                    <td><input type="checkbox"> Name 3</td>
-                    <td><input type="checkbox"> Name 4</td>
-                    <td><input type="checkbox"> Name 5</td>
-                    <td><input type="checkbox"> Name 6</td>
-                    <td><input type="checkbox"> Name 7</td>
+                    <td>Azan Isya</td>
+                    <td><input type="checkbox" id="checkbox-isya8"> Alwi</td>
+                    <td><input type="checkbox" id="checkbox-isya9"> Mario</td>
+                    <td><input type="checkbox" id="checkbox-isya10"> Ilzam</td>
+                    <td><input type="checkbox" id="checkbox-isya11"> Firdaus</td>
+                    <td><input type="checkbox" id="checkbox-isya12"> Gagah</td>
+                    <td><input type="checkbox" id="checkbox-isya13"> Ubai</td>
+                    <td><input type="checkbox" id="checkbox-isya14"> Pradana</td>
                 </tr>
-    
-                <!-- Add a separator between Day 1-7 and Day 8-14 -->
                 <tr><td colspan="8" style="height: 10px; background-color: #f0f0f0;"></td></tr>
-    
-                <!-- Day 8 to Day 14 -->
                 <tr>
-                    <th>Task / Day</th>
-                    <th>Senin (8)</th>
-                    <th>Selasa (9)</th>
-                    <th>Rabu (10)</th>
-                    <th>Kamis (11)</th>
-                    <th>Jumat (12)</th>
-                    <th>Sabtu (13)</th>
-                    <th>Minggu (14)</th>
+                    <th>Tugas / Hari</th>
+                    <th>Senin</th>
+                    <th>Selasa</th>
+                    <th>Rabu</th>
+                    <th>Kamis</th>
+                    <th>Jumat</th>
+                    <th>Sabtu</th>
+                    <th>Minggu</th>
                 </tr>
                 <tr>
                     <th></th>
-                    <th>Day 8</th>
                     <th>Day 9</th>
                     <th>Day 10</th>
                     <th>Day 11</th>
                     <th>Day 12</th>
                     <th>Day 13</th>
                     <th>Day 14</th>
+                    <th>Day 15</th>
                 </tr>
-                <!-- Tadarus Task (Day 8 to Day 14) -->
                 <tr>
+                    <td>Kegiatan Rohani</td>
                     <td>Tadarus</td>
-                    <td><input type="checkbox"> Name 8</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
+                    <td>Fokus UAS</td>
+                    <td>Fokus UAS</td>
+                    <td>Yasin - Alkahfi</td>
+                    <td>Fokus UAS</td>
+                    <td>Fokus UAS</td>
+                    <td>Refleksi</td>
                 </tr>
                 <tr>
                     <td>Azan Subuh</td>
-                    <td><input type="checkbox"> Name 8</td>
-                    <td><input type="checkbox"> Name 9</td>
-                    <td><input type="checkbox"> Name 10</td>
-                    <td><input type="checkbox"> Name 11</td>
-                    <td><input type="checkbox"> Name 12</td>
-                    <td><input type="checkbox"> Name 13</td>
-                    <td><input type="checkbox"> Name 14</td>
+                    <td><input type="checkbox" id="checkbox-subuh15"> Ade</td>
+                    <td><input type="checkbox" id="checkbox-subuh16"> Soleh</td>
+                    <td><input type="checkbox" id="checkbox-subuh17"> Gagah</td>
+                    <td><input type="checkbox" id="checkbox-subuh18"> Dhafin</td>
+                    <td><input type="checkbox" id="checkbox-subuh19"> Ade</td>
+                    <td><input type="checkbox" id="checkbox-subuh20"> Aryo</td>
+                    <td><input type="checkbox" id="checkbox-subuh21"> Yusuf</td>
                 </tr>
                 <tr>
-                    <td>Magrib</td>
-                    <td><input type="checkbox"> Name 8</td>
-                    <td><input type="checkbox"> Name 9</td>
-                    <td><input type="checkbox"> Name 10</td>
-                    <td><input type="checkbox"> Name 11</td>
-                    <td><input type="checkbox"> Name 12</td>
-                    <td><input type="checkbox"> Name 13</td>
-                    <td><input type="checkbox"> Name 14</td>
+                    <td>Azan Magrib</td>
+                    <td><input type="checkbox" id="checkbox-magrib15"> Yusuf</td>
+                    <td><input type="checkbox" id="checkbox-magrib16"> Kevin</td>
+                    <td><input type="checkbox" id="checkbox-magrib17"> Alwi</td>
+                    <td><input type="checkbox" id="checkbox-magrib18"> Ubai</td>
+                    <td><input type="checkbox" id="checkbox-magrib19"> Soleh</td>
+                    <td><input type="checkbox" id="checkbox-magrib20"> Gagah</td>
+                    <td><input type="checkbox" id="checkbox-magrib21"> Pradana</td>
                 </tr>
                 <tr>
-                    <td>Isya</td>
-                    <td><input type="checkbox"> Name 8</td>
-                    <td><input type="checkbox"> Name 9</td>
-                    <td><input type="checkbox"> Name 10</td>
-                    <td><input type="checkbox"> Name 11</td>
-                    <td><input type="checkbox"> Name 12</td>
-                    <td><input type="checkbox"> Name 13</td>
-                    <td><input type="checkbox"> Name 14</td>
+                    <td>Azan Isya</td>
+                    <td><input type="checkbox" id="checkbox-isya15"> Ubai</td>
+                    <td><input type="checkbox" id="checkbox-isya16"> Pradana</td>
+                    <td><input type="checkbox" id="checkbox-isya17"> Kevin</td>
+                    <td><input type="checkbox" id="checkbox-isya18"> Mario</td>
+                    <td><input type="checkbox" id="checkbox-isya19"> Firdaus</td>
+                    <td><input type="checkbox" id="checkbox-isya20"> Kevin</td>
+                    <td><input type="checkbox" id="checkbox-isya21"> Ilzam</td>
                 </tr>
-                <!-- Add a separator between Day 1-7 and Day 8-14 -->
                 <tr><td colspan="8" style="height: 10px; background-color: #f0f0f0;"></td></tr>
-    
-                <!-- Day 8 to Day 14 -->
+
                 <tr>
-                    <th>Task / Day</th>
-                    <th>Senin (8)</th>
-                    <th>Selasa (9)</th>
-                    <th>Rabu (10)</th>
-                    <th>Kamis (11)</th>
-                    <th>Jumat (12)</th>
-                    <th>Sabtu (13)</th>
-                    <th>Minggu (14)</th>
+                    <th>Tugas / Hari</th>
+                    <th>Senin</th>
+                    <th>Selasa</th>
+                    <th>Rabu</th>
+                    <th>Kamis</th>
+                    <th>Jumat</th>
+                    <th>Sabtu</th>
+                    <th></th>
                 </tr>
                 <tr>
                     <th></th>
-                    <th>Day 8</th>
-                    <th>Day 9</th>
-                    <th>Day 10</th>
-                    <th>Day 11</th>
-                    <th>Day 12</th>
-                    <th>Day 13</th>
-                    <th>Day 14</th>
-                </tr>
-                <!-- Tadarus Task (Day 8 to Day 14) -->
-                <tr>
-                    <td>Tadarus</td>
-                    <td><input type="checkbox"> Name 8</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td>Azan Subuh</td>
-                    <td><input type="checkbox"> Name 8</td>
-                    <td><input type="checkbox"> Name 9</td>
-                    <td><input type="checkbox"> Name 10</td>
-                    <td><input type="checkbox"> Name 11</td>
-                    <td><input type="checkbox"> Name 12</td>
-                    <td><input type="checkbox"> Name 13</td>
-                    <td><input type="checkbox"> Name 14</td>
-                </tr>
-                <tr>
-                    <td>Magrib</td>
-                    <td><input type="checkbox"> Name 8</td>
-                    <td><input type="checkbox"> Name 9</td>
-                    <td><input type="checkbox"> Name 10</td>
-                    <td><input type="checkbox"> Name 11</td>
-                    <td><input type="checkbox"> Name 12</td>
-                    <td><input type="checkbox"> Name 13</td>
-                    <td><input type="checkbox"> Name 14</td>
-                </tr>
-                <tr>
-                    <td>Isya</td>
-                    <td><input type="checkbox"> Name 8</td>
-                    <td><input type="checkbox"> Name 9</td>
-                    <td><input type="checkbox"> Name 10</td>
-                    <td><input type="checkbox"> Name 11</td>
-                    <td><input type="checkbox"> Name 12</td>
-                    <td><input type="checkbox"> Name 13</td>
-                    <td><input type="checkbox"> Name 14</td>
-                </tr>
-                <!-- Add a separator between Day 1-7 and Day 8-14 -->
-                <tr><td colspan="8" style="height: 10px; background-color: #f0f0f0;"></td></tr>
-    
-                <!-- Day 8 to Day 14 -->
-                <tr>
-                    <th>Task / Day</th>
-                    <th>Senin (8)</th>
-                    <th>Selasa (9)</th>
-                    <th>Rabu (10)</th>
-                    <th>Kamis (11)</th>
-                    <th>Jumat (12)</th>
-                    <th>Sabtu (13)</th>
-                    <th>Minggu (14)</th>
-                </tr>
-                <tr>
+                    <th>Day 16</th>
+                    <th>Day 17</th>
+                    <th>Day 18</th>
+                    <th>Day 19</th>
+                    <th>Day 20</th>
+                    <th>Day 21</th>
                     <th></th>
-                    <th>Day 8</th>
-                    <th>Day 9</th>
-                    <th>Day 10</th>
-                    <th>Day 11</th>
-                    <th>Day 12</th>
-                    <th>Day 13</th>
-                    <th>Day 14</th>
                 </tr>
-                <!-- Tadarus Task (Day 8 to Day 14) -->
                 <tr>
+                    <td>Kegiatan Rohani</td>
                     <td>Tadarus</td>
-                    <td><input type="checkbox"> Name 8</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
+                    <td>Fokus UAS</td>
+                    <td>Fokus UAS</td>
+                    <td>Yasin - Alkahfi</td>
+                    <td>Fokus UAS</td>
+                    <td>Fokus UAS</td>
                     <td></td>
                 </tr>
                 <tr>
                     <td>Azan Subuh</td>
-                    <td><input type="checkbox"> Name 8</td>
-                    <td><input type="checkbox"> Name 9</td>
-                    <td><input type="checkbox"> Name 10</td>
-                    <td><input type="checkbox"> Name 11</td>
-                    <td><input type="checkbox"> Name 12</td>
-                    <td><input type="checkbox"> Name 13</td>
-                    <td><input type="checkbox"> Name 14</td>
+                    <td><input type="checkbox" id="checkbox-subuh22"> Pradana</td>
+                    <td><input type="checkbox" id="checkbox-subuh23"> Ilzam</td>
+                    <td><input type="checkbox" id="checkbox-subuh24"> Alwi</td>
+                    <td><input type="checkbox" id="checkbox-subuh25"> Mario</td>
+                    <td><input type="checkbox" id="checkbox-subuh26"> Firdaus</td>
+                    <td><input type="checkbox" id="checkbox-subuh27"> Ubai</td>
+                    <td></td>
                 </tr>
                 <tr>
-                    <td>Magrib</td>
-                    <td><input type="checkbox"> Name 8</td>
-                    <td><input type="checkbox"> Name 9</td>
-                    <td><input type="checkbox"> Name 10</td>
-                    <td><input type="checkbox"> Name 11</td>
-                    <td><input type="checkbox"> Name 12</td>
-                    <td><input type="checkbox"> Name 13</td>
-                    <td><input type="checkbox"> Name 14</td>
+                    <td>Azan Magrib</td>
+                    <td><input type="checkbox" id="checkbox-magrib22"> Mario</td>
+                    <td><input type="checkbox" id="checkbox-magrib23"> Ade</td>
+                    <td><input type="checkbox" id="checkbox-magrib24"> Yusuf</td>
+                    <td><input type="checkbox" id="checkbox-magrib25"> Firdaus</td>
+                    <td><input type="checkbox" id="checkbox-magrib26"> Ubai</td>
+                    <td><input type="checkbox" id="checkbox-magrib27"> Ilzam</td>
+                    <td></td>
                 </tr>
                 <tr>
-                    <td>Isya</td>
-                    <td><input type="checkbox"> Name 8</td>
-                    <td><input type="checkbox"> Name 9</td>
-                    <td><input type="checkbox"> Name 10</td>
-                    <td><input type="checkbox"> Name 11</td>
-                    <td><input type="checkbox"> Name 12</td>
-                    <td><input type="checkbox"> Name 13</td>
-                    <td><input type="checkbox"> Name 14</td>
-                </tr>                                
+                    <td>Azan Isya</td>
+                    <td><input type="checkbox" id="checkbox-isya22"> Yusuf</td>
+                    <td><input type="checkbox" id="checkbox-isya23"> Dhafin</td>
+                    <td><input type="checkbox" id="checkbox-isya24"> Soleh</td>
+                    <td><input type="checkbox" id="checkbox-isya25"> Aryo</td>
+                    <td><input type="checkbox" id="checkbox-isya26"> Gagah</td>
+                    <td><input type="checkbox" id="checkbox-isya27"> Ade</td>
+                    <td></td>
+                </tr>                                       
             </tbody>
         </table>
     </div>
@@ -519,237 +670,236 @@
         <table>
             <tr>
                 <th>Name</th>
-                <th>1</th>
-                <th>2</th>
-                <th>3</th>
-                <th>4</th>
-                <th>5</th>
-            </tr>
-            <!-- Repeat for 30 names -->
-            <tr>
-                <td>Name 1</td>
-                <td><input type="checkbox"></td>
-                <td><input type="checkbox"></td>
-                <td><input type="checkbox"></td>
-                <td><input type="checkbox"></td>
-                <td><input type="checkbox"></td>
+                <th>I</th>
+                <th>II</th>
+                <th>III</th>
+                <th>IV</th>
+                <th>V</th>
             </tr>
             <tr>
-                <td>Name 2</td>
-                <td><input type="checkbox"></td>
-                <td><input type="checkbox"></td>
-                <td><input type="checkbox"></td>
-                <td><input type="checkbox"></td>
-                <td><input type="checkbox"></td>
+                <td>Minggu - Maulana</td>
+                <td><input type="checkbox" id="checkbox-galon1"></td>
+                <td><input type="checkbox" id="checkbox-galon2"></td>
+                <td><input type="checkbox" id="checkbox-galon3"></td>
+                <td><input type="checkbox" id="checkbox-galon4"></td>
+                <td><input type="checkbox" id="checkbox-galon5"></td>
             </tr>
             <tr>
-                <td>Name 3</td>
-                <td><input type="checkbox"></td>
-                <td><input type="checkbox"></td>
-                <td><input type="checkbox"></td>
-                <td><input type="checkbox"></td>
-                <td><input type="checkbox"></td>
+                <td>Minggu - Bryan</td>
+                <td><input type="checkbox" id="checkbox-galon6"></td>
+                <td><input type="checkbox" id="checkbox-galon7"></td>
+                <td><input type="checkbox" id="checkbox-galon8"></td>
+                <td><input type="checkbox" id="checkbox-galon9"></td>
+                <td><input type="checkbox" id="checkbox-galon10"></td>
             </tr>
             <tr>
-                <td>Name 4</td>
-                <td><input type="checkbox"></td>
-                <td><input type="checkbox"></td>
-                <td><input type="checkbox"></td>
-                <td><input type="checkbox"></td>
-                <td><input type="checkbox"></td>
+                <td>Minggu - Dhafin</td>
+                <td><input type="checkbox" id="checkbox-galon11"></td>
+                <td><input type="checkbox" id="checkbox-galon12"></td>
+                <td><input type="checkbox" id="checkbox-galon13"></td>
+                <td><input type="checkbox" id="checkbox-galon14"></td>
+                <td><input type="checkbox" id="checkbox-galon15"></td>
             </tr>
             <tr>
-                <td>Name 5</td>
-                <td><input type="checkbox"></td>
-                <td><input type="checkbox"></td>
-                <td><input type="checkbox"></td>
-                <td><input type="checkbox"></td>
-                <td><input type="checkbox"></td>
+                <td>Minggu - Frans</td>
+                <td><input type="checkbox" id="checkbox-galon16"></td>
+                <td><input type="checkbox" id="checkbox-galon17"></td>
+                <td><input type="checkbox" id="checkbox-galon18"></td>
+                <td><input type="checkbox" id="checkbox-galon19"></td>
+                <td><input type="checkbox" id="checkbox-galon20"></td>
             </tr>
             <tr>
-                <td>Name 6</td>
-                <td><input type="checkbox"></td>
-                <td><input type="checkbox"></td>
-                <td><input type="checkbox"></td>
-                <td><input type="checkbox"></td>
-                <td><input type="checkbox"></td>
+                <td>Senin - Alwi</td>
+                <td><input type="checkbox" id="checkbox-galon21"></td>
+                <td><input type="checkbox" id="checkbox-galon22"></td>
+                <td><input type="checkbox" id="checkbox-galon23"></td>
+                <td><input type="checkbox" id="checkbox-galon24"></td>
+                <td><input type="checkbox" id="checkbox-galon25"></td>
             </tr>
             <tr>
-                <td>Name 7</td>
-                <td><input type="checkbox"></td>
-                <td><input type="checkbox"></td>
-                <td><input type="checkbox"></td>
-                <td><input type="checkbox"></td>
-                <td><input type="checkbox"></td>
+                <td>Senin - Ubai</td>
+                <td><input type="checkbox" id="checkbox-galon26"></td>
+                <td><input type="checkbox" id="checkbox-galon27"></td>
+                <td><input type="checkbox" id="checkbox-galon28"></td>
+                <td><input type="checkbox" id="checkbox-galon29"></td>
+                <td><input type="checkbox" id="checkbox-galon30"></td>
             </tr>
             <tr>
-                <td>Name 8</td>
-                <td><input type="checkbox"></td>
-                <td><input type="checkbox"></td>
-                <td><input type="checkbox"></td>
-                <td><input type="checkbox"></td>
-                <td><input type="checkbox"></td>
+                <td>Senin - Rivaldi</td>
+                <td><input type="checkbox" id="checkbox-galon31"></td>
+                <td><input type="checkbox" id="checkbox-galon32"></td>
+                <td><input type="checkbox" id="checkbox-galon33"></td>
+                <td><input type="checkbox" id="checkbox-galon34"></td>
+                <td><input type="checkbox" id="checkbox-galon35"></td>
             </tr>
             <tr>
-                <td>Name 9</td>
-                <td><input type="checkbox"></td>
-                <td><input type="checkbox"></td>
-                <td><input type="checkbox"></td>
-                <td><input type="checkbox"></td>
-                <td><input type="checkbox"></td>
+                <td>Senin - Zidan</td>
+                <td><input type="checkbox" id="checkbox-galon36"></td>
+                <td><input type="checkbox" id="checkbox-galon37"></td>
+                <td><input type="checkbox" id="checkbox-galon38"></td>
+                <td><input type="checkbox" id="checkbox-galon39"></td>
+                <td><input type="checkbox" id="checkbox-galon40"></td>
             </tr>
             <tr>
-                <td>Name 10</td>
-                <td><input type="checkbox"></td>
-                <td><input type="checkbox"></td>
-                <td><input type="checkbox"></td>
-                <td><input type="checkbox"></td>
-                <td><input type="checkbox"></td>
+                <td>Selasa - Soleh</td>
+                <td><input type="checkbox" id="checkbox-galon41"></td>
+                <td><input type="checkbox" id="checkbox-galon42"></td>
+                <td><input type="checkbox" id="checkbox-galon43"></td>
+                <td><input type="checkbox" id="checkbox-galon44"></td>
+                <td><input type="checkbox" id="checkbox-galon45"></td>
             </tr>
             <tr>
-                <td>Name 11</td>
-                <td><input type="checkbox"></td>
-                <td><input type="checkbox"></td>
-                <td><input type="checkbox"></td>
-                <td><input type="checkbox"></td>
-                <td><input type="checkbox"></td>
+                <td>Selasa - Wilbert</td>
+                <td><input type="checkbox" id="checkbox-galon46"></td>
+                <td><input type="checkbox" id="checkbox-galon47"></td>
+                <td><input type="checkbox" id="checkbox-galon48"></td>
+                <td><input type="checkbox" id="checkbox-galon49"></td>
+                <td><input type="checkbox" id="checkbox-galon50"></td>
             </tr>
             <tr>
-                <td>Name 12</td>
-                <td><input type="checkbox"></td>
-                <td><input type="checkbox"></td>
-                <td><input type="checkbox"></td>
-                <td><input type="checkbox"></td>
-                <td><input type="checkbox"></td>
+                <td>Selasa - Farel</td>
+                <td><input type="checkbox" id="checkbox-galon51"></td>
+                <td><input type="checkbox" id="checkbox-galon52"></td>
+                <td><input type="checkbox" id="checkbox-galon53"></td>
+                <td><input type="checkbox" id="checkbox-galon54"></td>
+                <td><input type="checkbox" id="checkbox-galon55"></td>
             </tr>
             <tr>
-                <td>Name 13</td>
-                <td><input type="checkbox"></td>
-                <td><input type="checkbox"></td>
-                <td><input type="checkbox"></td>
-                <td><input type="checkbox"></td>
-                <td><input type="checkbox"></td>
+                <td>Selasa - Mario</td>
+                <td><input type="checkbox" id="checkbox-galon56"></td>
+                <td><input type="checkbox" id="checkbox-galon57"></td>
+                <td><input type="checkbox" id="checkbox-galon58"></td>
+                <td><input type="checkbox" id="checkbox-galon59"></td>
+                <td><input type="checkbox" id="checkbox-galon60"></td>
             </tr>
             <tr>
-                <td>Name 14</td>
-                <td><input type="checkbox"></td>
-                <td><input type="checkbox"></td>
-                <td><input type="checkbox"></td>
-                <td><input type="checkbox"></td>
-                <td><input type="checkbox"></td>
+                <td>Rabu - Yusuf</td>
+                <td><input type="checkbox" id="checkbox-galon61"></td>
+                <td><input type="checkbox" id="checkbox-galon62"></td>
+                <td><input type="checkbox" id="checkbox-galon63"></td>
+                <td><input type="checkbox" id="checkbox-galon64"></td>
+                <td><input type="checkbox" id="checkbox-galon65"></td>
             </tr>
             <tr>
-                <td>Name 15</td>
-                <td><input type="checkbox"></td>
-                <td><input type="checkbox"></td>
-                <td><input type="checkbox"></td>
-                <td><input type="checkbox"></td>
-                <td><input type="checkbox"></td>
+                <td>Rabu - Gagah</td>
+                <td><input type="checkbox" id="checkbox-galon66"></td>
+                <td><input type="checkbox" id="checkbox-galon67"></td>
+                <td><input type="checkbox" id="checkbox-galon68"></td>
+                <td><input type="checkbox" id="checkbox-galon69"></td>
+                <td><input type="checkbox" id="checkbox-galon70"></td>
             </tr>
             <tr>
-                <td>Name 16</td>
-                <td><input type="checkbox"></td>
-                <td><input type="checkbox"></td>
-                <td><input type="checkbox"></td>
-                <td><input type="checkbox"></td>
-                <td><input type="checkbox"></td>
+                <td>Rabu - Faisol</td>
+                <td><input type="checkbox" id="checkbox-galon71"></td>
+                <td><input type="checkbox" id="checkbox-galon72"></td>
+                <td><input type="checkbox" id="checkbox-galon73"></td>
+                <td><input type="checkbox" id="checkbox-galon74"></td>
+                <td><input type="checkbox" id="checkbox-galon75"></td>
             </tr>
             <tr>
-                <td>Name 17</td>
-                <td><input type="checkbox"></td>
-                <td><input type="checkbox"></td>
-                <td><input type="checkbox"></td>
-                <td><input type="checkbox"></td>
-                <td><input type="checkbox"></td>
+                <td>Rabu - Irvan</td>
+                <td><input type="checkbox" id="checkbox-galon76"></td>
+                <td><input type="checkbox" id="checkbox-galon77"></td>
+                <td><input type="checkbox" id="checkbox-galon78"></td>
+                <td><input type="checkbox" id="checkbox-galon79"></td>
+                <td><input type="checkbox" id="checkbox-galon80"></td>
             </tr>
             <tr>
-                <td>Name 18</td>
-                <td><input type="checkbox"></td>
-                <td><input type="checkbox"></td>
-                <td><input type="checkbox"></td>
-                <td><input type="checkbox"></td>
-                <td><input type="checkbox"></td>
+                <td>Kamis - Kevin</td>
+                <td><input type="checkbox" id="checkbox-galon81"></td>
+                <td><input type="checkbox" id="checkbox-galon82"></td>
+                <td><input type="checkbox" id="checkbox-galon83"></td>
+                <td><input type="checkbox" id="checkbox-galon84"></td>
+                <td><input type="checkbox" id="checkbox-galon85"></td>
             </tr>
             <tr>
-                <td>Name 19</td>
-                <td><input type="checkbox"></td>
-                <td><input type="checkbox"></td>
-                <td><input type="checkbox"></td>
-                <td><input type="checkbox"></td>
-                <td><input type="checkbox"></td>
+                <td>Kamis - Aryo</td>
+                <td><input type="checkbox" id="checkbox-galon86"></td>
+                <td><input type="checkbox" id="checkbox-galon87"></td>
+                <td><input type="checkbox" id="checkbox-galon88"></td>
+                <td><input type="checkbox" id="checkbox-galon89"></td>
+                <td><input type="checkbox" id="checkbox-galon90"></td>
             </tr>
             <tr>
-                <td>Name 20</td>
-                <td><input type="checkbox"></td>
-                <td><input type="checkbox"></td>
-                <td><input type="checkbox"></td>
-                <td><input type="checkbox"></td>
-                <td><input type="checkbox"></td>
+                <td>Kamis - Faris</td>
+                <td><input type="checkbox" id="checkbox-galon91"></td>
+                <td><input type="checkbox" id="checkbox-galon92"></td>
+                <td><input type="checkbox" id="checkbox-galon93"></td>
+                <td><input type="checkbox" id="checkbox-galon94"></td>
+                <td><input type="checkbox" id="checkbox-galon95"></td>
             </tr>
             <tr>
-                <td>Name 21</td>
-                <td><input type="checkbox"></td>
-                <td><input type="checkbox"></td>
-                <td><input type="checkbox"></td>
-                <td><input type="checkbox"></td>
-                <td><input type="checkbox"></td>
+                <td>Kamis - Ilzam</td>
+                <td><input type="checkbox" id="checkbox-galon96"></td>
+                <td><input type="checkbox" id="checkbox-galon97"></td>
+                <td><input type="checkbox" id="checkbox-galon98"></td>
+                <td><input type="checkbox" id="checkbox-galon99"></td>
+                <td><input type="checkbox" id="checkbox-galon100"></td>
             </tr>
             <tr>
-                <td>Name 22</td>
-                <td><input type="checkbox"></td>
-                <td><input type="checkbox"></td>
-                <td><input type="checkbox"></td>
-                <td><input type="checkbox"></td>
-                <td><input type="checkbox"></td>
+                <td>Jumat - Ahsan</td>
+                <td><input type="checkbox" id="checkbox-galon101"></td>
+                <td><input type="checkbox" id="checkbox-galon102"></td>
+                <td><input type="checkbox" id="checkbox-galon103"></td>
+                <td><input type="checkbox" id="checkbox-galon104"></td>
+                <td><input type="checkbox" id="checkbox-galon105"></td>
             </tr>
             <tr>
-                <td>Name 23</td>
-                <td><input type="checkbox"></td>
-                <td><input type="checkbox"></td>
-                <td><input type="checkbox"></td>
-                <td><input type="checkbox"></td>
-                <td><input type="checkbox"></td>
+                <td>Jumat - Pradana</td>
+                <td><input type="checkbox" id="checkbox-galon106"></td>
+                <td><input type="checkbox" id="checkbox-galon107"></td>
+                <td><input type="checkbox" id="checkbox-galon108"></td>
+                <td><input type="checkbox" id="checkbox-galon109"></td>
+                <td><input type="checkbox" id="checkbox-galon110"></td>
             </tr>
             <tr>
-                <td>Name 24</td>
-                <td><input type="checkbox"></td>
-                <td><input type="checkbox"></td>
-                <td><input type="checkbox"></td>
-                <td><input type="checkbox"></td>
-                <td><input type="checkbox"></td>
+                <td>Jumat - Fito</td>
+                <td><input type="checkbox" id="checkbox-galon111"></td>
+                <td><input type="checkbox" id="checkbox-galon112"></td>
+                <td><input type="checkbox" id="checkbox-galon113"></td>
+                <td><input type="checkbox" id="checkbox-galon114"></td>
+                <td><input type="checkbox" id="checkbox-galon115"></td>
             </tr>
             <tr>
-                <td>Name 25</td>
-                <td><input type="checkbox"></td>
-                <td><input type="checkbox"></td>
-                <td><input type="checkbox"></td>
-                <td><input type="checkbox"></td>
-                <td><input type="checkbox"></td>
+                <td>Jumat - Joshua</td>
+                <td><input type="checkbox" id="checkbox-galon116"></td>
+                <td><input type="checkbox" id="checkbox-galon117"></td>
+                <td><input type="checkbox" id="checkbox-galon118"></td>
+                <td><input type="checkbox" id="checkbox-galon119"></td>
+                <td><input type="checkbox" id="checkbox-galon120"></td>
             </tr>
             <tr>
-                <td>Name 26</td>
-                <td><input type="checkbox"></td>
-                <td><input type="checkbox"></td>
-                <td><input type="checkbox"></td>
-                <td><input type="checkbox"></td>
-                <td><input type="checkbox"></td>
+                <td>Sabtu - Ade</td>
+                <td><input type="checkbox" id="checkbox-galon121"></td>
+                <td><input type="checkbox" id="checkbox-galon122"></td>
+                <td><input type="checkbox" id="checkbox-galon123"></td>
+                <td><input type="checkbox" id="checkbox-galon124"></td>
+                <td><input type="checkbox" id="checkbox-galon125"></td>
             </tr>
             <tr>
-                <td>Name 27</td>
-                <td><input type="checkbox"></td>
-                <td><input type="checkbox"></td>
-                <td><input type="checkbox"></td>
-                <td><input type="checkbox"></td>
-                <td><input type="checkbox"></td>
+                <td>Sabtu - Novel</td>
+                <td><input type="checkbox" id="checkbox-galon126"></td>
+                <td><input type="checkbox" id="checkbox-galon127"></td>
+                <td><input type="checkbox" id="checkbox-galon128"></td>
+                <td><input type="checkbox" id="checkbox-galon129"></td>
+                <td><input type="checkbox" id="checkbox-galon130"></td>
             </tr>
             <tr>
-                <td>Name 28</td>
-                <td><input type="checkbox"></td>
-                <td><input type="checkbox"></td>
-                <td><input type="checkbox"></td>
-                <td><input type="checkbox"></td>
-                <td><input type="checkbox"></td>
-            </tr>                                                      
+                <td>Sabtu - Abu</td>
+                <td><input type="checkbox" id="checkbox-galon131"></td>
+                <td><input type="checkbox" id="checkbox-galon132"></td>
+                <td><input type="checkbox" id="checkbox-galon133"></td>
+                <td><input type="checkbox" id="checkbox-galon134"></td>
+                <td><input type="checkbox" id="checkbox-galon135"></td>
+            </tr>
+            <tr>
+                <td>Sabtu - Firdaus</td>
+                <td><input type="checkbox" id="checkbox-galon136"></td>
+                <td><input type="checkbox" id="checkbox-galon137"></td>
+                <td><input type="checkbox" id="checkbox-galon138"></td>
+                <td><input type="checkbox" id="checkbox-galon139"></td>
+                <td><input type="checkbox" id="checkbox-galon140"></td>
+            </tr>                                                    
         </table>
     </div>
 
@@ -758,240 +908,288 @@
         <table>
             <tr>
                 <th>Name</th>
-                <th>1</th>
-                <th>2</th>
-                <th>3</th>
-                <th>4</th>
-                <th>5</th>
-            </tr>
-            <!-- Repeat for 30 names -->
-            <tr>
-                <td>Name 1</td>
-                <td><input type="checkbox"></td>
-                <td><input type="checkbox"></td>
-                <td><input type="checkbox"></td>
-                <td><input type="checkbox"></td>
-                <td><input type="checkbox"></td>
+                <th>I</th>
+                <th>II</th>
+                <th>III</th>
+                <th>IV</th>
+                <th>V</th>
+                <th>VI</th>
             </tr>
             <tr>
-                <td>Name 2</td>
-                <td><input type="checkbox"></td>
-                <td><input type="checkbox"></td>
-                <td><input type="checkbox"></td>
-                <td><input type="checkbox"></td>
-                <td><input type="checkbox"></td>
+                <td>Aryo</td>
+                <td><input type="checkbox" id="checkbox-beras1"></td>
+                <td><input type="checkbox" id="checkbox-beras2"></td>
+                <td><input type="checkbox" id="checkbox-beras3"></td>
+                <td><input type="checkbox" id="checkbox-beras4"></td>
+                <td><input type="checkbox" id="checkbox-beras5"></td>
+                <td><input type="checkbox" id="checkbox-beras5"></td>
             </tr>
             <tr>
-                <td>Name 3</td>
-                <td><input type="checkbox"></td>
-                <td><input type="checkbox"></td>
-                <td><input type="checkbox"></td>
-                <td><input type="checkbox"></td>
-                <td><input type="checkbox"></td>
+                <td>Rivaldi</td>
+                <td><input type="checkbox" id="checkbox-beras6"></td>
+                <td><input type="checkbox" id="checkbox-beras7"></td>
+                <td><input type="checkbox" id="checkbox-beras8"></td>
+                <td><input type="checkbox" id="checkbox-beras9"></td>
+                <td><input type="checkbox" id="checkbox-beras0"></td>
+                <td><input type="checkbox" id="checkbox-beras0"></td>
             </tr>
             <tr>
-                <td>Name 4</td>
-                <td><input type="checkbox"></td>
-                <td><input type="checkbox"></td>
-                <td><input type="checkbox"></td>
-                <td><input type="checkbox"></td>
-                <td><input type="checkbox"></td>
+                <td>Dhafin</td>
+                <td><input type="checkbox" id="checkbox-beras11"></td>
+                <td><input type="checkbox" id="checkbox-beras12"></td>
+                <td><input type="checkbox" id="checkbox-beras13"></td>
+                <td><input type="checkbox" id="checkbox-beras14"></td>
+                <td><input type="checkbox" id="checkbox-beras15"></td>
+                <td><input type="checkbox" id="checkbox-beras15"></td>
             </tr>
             <tr>
-                <td>Name 5</td>
-                <td><input type="checkbox"></td>
-                <td><input type="checkbox"></td>
-                <td><input type="checkbox"></td>
-                <td><input type="checkbox"></td>
-                <td><input type="checkbox"></td>
+                <td>Bryan
+                </td>
+                <td><input type="checkbox" id="checkbox-beras16"></td>
+                <td><input type="checkbox" id="checkbox-beras17"></td>
+                <td><input type="checkbox" id="checkbox-beras18"></td>
+                <td><input type="checkbox" id="checkbox-beras19"></td>
+                <td><input type="checkbox" id="checkbox-beras20"></td>
+                <td><input type="checkbox" id="checkbox-beras20"></td>
             </tr>
             <tr>
-                <td>Name 6</td>
-                <td><input type="checkbox"></td>
-                <td><input type="checkbox"></td>
-                <td><input type="checkbox"></td>
-                <td><input type="checkbox"></td>
-                <td><input type="checkbox"></td>
+                <td>Frans</td>
+                <td><input type="checkbox" id="checkbox-beras21"></td>
+                <td><input type="checkbox" id="checkbox-beras22"></td>
+                <td><input type="checkbox" id="checkbox-beras23"></td>
+                <td><input type="checkbox" id="checkbox-beras24"></td>
+                <td><input type="checkbox" id="checkbox-beras25"></td>
+                <td><input type="checkbox" id="checkbox-beras25"></td>
             </tr>
             <tr>
-                <td>Name 7</td>
-                <td><input type="checkbox"></td>
-                <td><input type="checkbox"></td>
-                <td><input type="checkbox"></td>
-                <td><input type="checkbox"></td>
-                <td><input type="checkbox"></td>
+                <td>Hansel</td>
+                <td><input type="checkbox" id="checkbox-beras26"></td>
+                <td><input type="checkbox" id="checkbox-beras27"></td>
+                <td><input type="checkbox" id="checkbox-beras28"></td>
+                <td><input type="checkbox" id="checkbox-beras29"></td>
+                <td><input type="checkbox" id="checkbox-beras30"></td>
+                <td><input type="checkbox" id="checkbox-beras30"></td>
             </tr>
             <tr>
-                <td>Name 8</td>
-                <td><input type="checkbox"></td>
-                <td><input type="checkbox"></td>
-                <td><input type="checkbox"></td>
-                <td><input type="checkbox"></td>
-                <td><input type="checkbox"></td>
+                <td>Zidan</td>
+                <td><input type="checkbox" id="checkbox-beras31"></td>
+                <td><input type="checkbox" id="checkbox-beras32"></td>
+                <td><input type="checkbox" id="checkbox-beras33"></td>
+                <td><input type="checkbox" id="checkbox-beras34"></td>
+                <td><input type="checkbox" id="checkbox-beras35"></td>
+                <td><input type="checkbox" id="checkbox-beras35"></td>
             </tr>
             <tr>
-                <td>Name 9</td>
-                <td><input type="checkbox"></td>
-                <td><input type="checkbox"></td>
-                <td><input type="checkbox"></td>
-                <td><input type="checkbox"></td>
-                <td><input type="checkbox"></td>
+                <td>Soleh</td>
+                <td><input type="checkbox" id="checkbox-beras36"></td>
+                <td><input type="checkbox" id="checkbox-beras37"></td>
+                <td><input type="checkbox" id="checkbox-beras38"></td>
+                <td><input type="checkbox" id="checkbox-beras39"></td>
+                <td><input type="checkbox" id="checkbox-beras40"></td>
+                <td><input type="checkbox" id="checkbox-beras40"></td>
             </tr>
             <tr>
-                <td>Name 10</td>
-                <td><input type="checkbox"></td>
-                <td><input type="checkbox"></td>
-                <td><input type="checkbox"></td>
-                <td><input type="checkbox"></td>
-                <td><input type="checkbox"></td>
+                <td>Farel</td>
+                <td><input type="checkbox" id="checkbox-beras41"></td>
+                <td><input type="checkbox" id="checkbox-beras42"></td>
+                <td><input type="checkbox" id="checkbox-beras43"></td>
+                <td><input type="checkbox" id="checkbox-beras44"></td>
+                <td><input type="checkbox" id="checkbox-beras45"></td>
+                <td><input type="checkbox" id="checkbox-beras45"></td>
             </tr>
             <tr>
-                <td>Name 11</td>
-                <td><input type="checkbox"></td>
-                <td><input type="checkbox"></td>
-                <td><input type="checkbox"></td>
-                <td><input type="checkbox"></td>
-                <td><input type="checkbox"></td>
+                <td>Gagah</td>
+                <td><input type="checkbox" id="checkbox-beras46"></td>
+                <td><input type="checkbox" id="checkbox-beras47"></td>
+                <td><input type="checkbox" id="checkbox-beras48"></td>
+                <td><input type="checkbox" id="checkbox-beras49"></td>
+                <td><input type="checkbox" id="checkbox-beras50"></td>
+                <td><input type="checkbox" id="checkbox-beras50"></td>
             </tr>
             <tr>
-                <td>Name 12</td>
-                <td><input type="checkbox"></td>
-                <td><input type="checkbox"></td>
-                <td><input type="checkbox"></td>
-                <td><input type="checkbox"></td>
-                <td><input type="checkbox"></td>
+                <td>Yusuf</td>
+                <td><input type="checkbox" id="checkbox-beras51"></td>
+                <td><input type="checkbox" id="checkbox-beras52"></td>
+                <td><input type="checkbox" id="checkbox-beras53"></td>
+                <td><input type="checkbox" id="checkbox-beras54"></td>
+                <td><input type="checkbox" id="checkbox-beras55"></td>
+                <td><input type="checkbox" id="checkbox-beras55"></td>
             </tr>
             <tr>
-                <td>Name 13</td>
-                <td><input type="checkbox"></td>
-                <td><input type="checkbox"></td>
-                <td><input type="checkbox"></td>
-                <td><input type="checkbox"></td>
-                <td><input type="checkbox"></td>
+                <td>Faisol</td>
+                <td><input type="checkbox" id="checkbox-beras56"></td>
+                <td><input type="checkbox" id="checkbox-beras57"></td>
+                <td><input type="checkbox" id="checkbox-beras58"></td>
+                <td><input type="checkbox" id="checkbox-beras59"></td>
+                <td><input type="checkbox" id="checkbox-beras60"></td>
+                <td><input type="checkbox" id="checkbox-beras60"></td>
             </tr>
             <tr>
-                <td>Name 14</td>
-                <td><input type="checkbox"></td>
-                <td><input type="checkbox"></td>
-                <td><input type="checkbox"></td>
-                <td><input type="checkbox"></td>
-                <td><input type="checkbox"></td>
+                <td>Pedro</td>
+                <td><input type="checkbox" id="checkbox-beras61"></td>
+                <td><input type="checkbox" id="checkbox-beras62"></td>
+                <td><input type="checkbox" id="checkbox-beras63"></td>
+                <td><input type="checkbox" id="checkbox-beras64"></td>
+                <td><input type="checkbox" id="checkbox-beras65"></td>
+                <td><input type="checkbox" id="checkbox-beras65"></td>
             </tr>
             <tr>
-                <td>Name 15</td>
-                <td><input type="checkbox"></td>
-                <td><input type="checkbox"></td>
-                <td><input type="checkbox"></td>
-                <td><input type="checkbox"></td>
-                <td><input type="checkbox"></td>
+                <td>Fito</td>
+                <td><input type="checkbox" id="checkbox-beras66"></td>
+                <td><input type="checkbox" id="checkbox-beras67"></td>
+                <td><input type="checkbox" id="checkbox-beras68"></td>
+                <td><input type="checkbox" id="checkbox-beras69"></td>
+                <td><input type="checkbox" id="checkbox-beras70"></td>
+                <td><input type="checkbox" id="checkbox-beras70"></td>
             </tr>
             <tr>
-                <td>Name 16</td>
-                <td><input type="checkbox"></td>
-                <td><input type="checkbox"></td>
-                <td><input type="checkbox"></td>
-                <td><input type="checkbox"></td>
-                <td><input type="checkbox"></td>
+                <td>Maulana</td>
+                <td><input type="checkbox" id="checkbox-beras71"></td>
+                <td><input type="checkbox" id="checkbox-beras72"></td>
+                <td><input type="checkbox" id="checkbox-beras73"></td>
+                <td><input type="checkbox" id="checkbox-beras74"></td>
+                <td><input type="checkbox" id="checkbox-beras75"></td>
+                <td><input type="checkbox" id="checkbox-beras75"></td>
             </tr>
             <tr>
-                <td>Name 17</td>
-                <td><input type="checkbox"></td>
-                <td><input type="checkbox"></td>
-                <td><input type="checkbox"></td>
-                <td><input type="checkbox"></td>
-                <td><input type="checkbox"></td>
+                <td>Wilbert</td>
+                <td><input type="checkbox" id="checkbox-beras76"></td>
+                <td><input type="checkbox" id="checkbox-beras77"></td>
+                <td><input type="checkbox" id="checkbox-beras78"></td>
+                <td><input type="checkbox" id="checkbox-beras79"></td>
+                <td><input type="checkbox" id="checkbox-beras80"></td>
+                <td><input type="checkbox" id="checkbox-beras80"></td>
             </tr>
             <tr>
-                <td>Name 18</td>
-                <td><input type="checkbox"></td>
-                <td><input type="checkbox"></td>
-                <td><input type="checkbox"></td>
-                <td><input type="checkbox"></td>
-                <td><input type="checkbox"></td>
+                <td>Faris</td>
+                <td><input type="checkbox" id="checkbox-beras81"></td>
+                <td><input type="checkbox" id="checkbox-beras82"></td>
+                <td><input type="checkbox" id="checkbox-beras83"></td>
+                <td><input type="checkbox" id="checkbox-beras84"></td>
+                <td><input type="checkbox" id="checkbox-beras85"></td>
+                <td><input type="checkbox" id="checkbox-beras85"></td>
             </tr>
             <tr>
-                <td>Name 19</td>
-                <td><input type="checkbox"></td>
-                <td><input type="checkbox"></td>
-                <td><input type="checkbox"></td>
-                <td><input type="checkbox"></td>
-                <td><input type="checkbox"></td>
+                <td>Alwi</td>
+                <td><input type="checkbox" id="checkbox-beras86"></td>
+                <td><input type="checkbox" id="checkbox-beras87"></td>
+                <td><input type="checkbox" id="checkbox-beras88"></td>
+                <td><input type="checkbox" id="checkbox-beras89"></td>
+                <td><input type="checkbox" id="checkbox-beras90"></td>
+                <td><input type="checkbox" id="checkbox-beras90"></td>
             </tr>
             <tr>
-                <td>Name 20</td>
-                <td><input type="checkbox"></td>
-                <td><input type="checkbox"></td>
-                <td><input type="checkbox"></td>
-                <td><input type="checkbox"></td>
-                <td><input type="checkbox"></td>
+                <td>Ahsan</td>
+                <td><input type="checkbox" id="checkbox-beras91"></td>
+                <td><input type="checkbox" id="checkbox-beras92"></td>
+                <td><input type="checkbox" id="checkbox-beras93"></td>
+                <td><input type="checkbox" id="checkbox-beras94"></td>
+                <td><input type="checkbox" id="checkbox-beras95"></td>
+                <td><input type="checkbox" id="checkbox-beras95"></td>
             </tr>
             <tr>
-                <td>Name 21</td>
-                <td><input type="checkbox"></td>
-                <td><input type="checkbox"></td>
-                <td><input type="checkbox"></td>
-                <td><input type="checkbox"></td>
-                <td><input type="checkbox"></td>
+                <td>Mario</td>
+                <td><input type="checkbox" id="checkbox-beras96"></td>
+                <td><input type="checkbox" id="checkbox-beras97"></td>
+                <td><input type="checkbox" id="checkbox-beras98"></td>
+                <td><input type="checkbox" id="checkbox-beras99"></td>
+                <td><input type="checkbox" id="checkbox-beras100"></td>
+                <td><input type="checkbox" id="checkbox-beras100"></td>
             </tr>
             <tr>
-                <td>Name 22</td>
-                <td><input type="checkbox"></td>
-                <td><input type="checkbox"></td>
-                <td><input type="checkbox"></td>
-                <td><input type="checkbox"></td>
-                <td><input type="checkbox"></td>
+                <td>Novel</td>
+                <td><input type="checkbox" id="checkbox-beras101"></td>
+                <td><input type="checkbox" id="checkbox-beras102"></td>
+                <td><input type="checkbox" id="checkbox-beras103"></td>
+                <td><input type="checkbox" id="checkbox-beras104"></td>
+                <td><input type="checkbox" id="checkbox-beras105"></td>
+                <td><input type="checkbox" id="checkbox-beras105"></td>
             </tr>
             <tr>
-                <td>Name 23</td>
-                <td><input type="checkbox"></td>
-                <td><input type="checkbox"></td>
-                <td><input type="checkbox"></td>
-                <td><input type="checkbox"></td>
-                <td><input type="checkbox"></td>
+                <td>Ade</td>
+                <td><input type="checkbox" id="checkbox-beras106"></td>
+                <td><input type="checkbox" id="checkbox-beras107"></td>
+                <td><input type="checkbox" id="checkbox-beras108"></td>
+                <td><input type="checkbox" id="checkbox-beras109"></td>
+                <td><input type="checkbox" id="checkbox-beras110"></td>
+                <td><input type="checkbox" id="checkbox-beras110"></td>
             </tr>
             <tr>
-                <td>Name 24</td>
-                <td><input type="checkbox"></td>
-                <td><input type="checkbox"></td>
-                <td><input type="checkbox"></td>
-                <td><input type="checkbox"></td>
-                <td><input type="checkbox"></td>
+                <td>Abu</td>
+                <td><input type="checkbox" id="checkbox-beras111"></td>
+                <td><input type="checkbox" id="checkbox-beras112"></td>
+                <td><input type="checkbox" id="checkbox-beras113"></td>
+                <td><input type="checkbox" id="checkbox-beras114"></td>
+                <td><input type="checkbox" id="checkbox-beras115"></td>
+                <td><input type="checkbox" id="checkbox-beras115"></td>
             </tr>
             <tr>
-                <td>Name 25</td>
-                <td><input type="checkbox"></td>
-                <td><input type="checkbox"></td>
-                <td><input type="checkbox"></td>
-                <td><input type="checkbox"></td>
-                <td><input type="checkbox"></td>
+                <td>Kevin</td>
+                <td><input type="checkbox" id="checkbox-beras116"></td>
+                <td><input type="checkbox" id="checkbox-beras117"></td>
+                <td><input type="checkbox" id="checkbox-beras118"></td>
+                <td><input type="checkbox" id="checkbox-beras119"></td>
+                <td><input type="checkbox" id="checkbox-beras120"></td>
+                <td><input type="checkbox" id="checkbox-beras120"></td>
             </tr>
             <tr>
-                <td>Name 26</td>
-                <td><input type="checkbox"></td>
-                <td><input type="checkbox"></td>
-                <td><input type="checkbox"></td>
-                <td><input type="checkbox"></td>
-                <td><input type="checkbox"></td>
+                <td>Ilzam</td>
+                <td><input type="checkbox" id="checkbox-beras121"></td>
+                <td><input type="checkbox" id="checkbox-beras122"></td>
+                <td><input type="checkbox" id="checkbox-beras123"></td>
+                <td><input type="checkbox" id="checkbox-beras124"></td>
+                <td><input type="checkbox" id="checkbox-beras125"></td>
+                <td><input type="checkbox" id="checkbox-beras125"></td>
             </tr>
             <tr>
-                <td>Name 27</td>
-                <td><input type="checkbox"></td>
-                <td><input type="checkbox"></td>
-                <td><input type="checkbox"></td>
-                <td><input type="checkbox"></td>
-                <td><input type="checkbox"></td>
+                <td>Pradana</td>
+                <td><input type="checkbox" id="checkbox-beras126"></td>
+                <td><input type="checkbox" id="checkbox-beras127"></td>
+                <td><input type="checkbox" id="checkbox-beras128"></td>
+                <td><input type="checkbox" id="checkbox-beras129"></td>
+                <td><input type="checkbox" id="checkbox-beras130"></td>
+                <td><input type="checkbox" id="checkbox-beras130"></td>
             </tr>
             <tr>
-                <td>Name 28</td>
-                <td><input type="checkbox"></td>
-                <td><input type="checkbox"></td>
-                <td><input type="checkbox"></td>
-                <td><input type="checkbox"></td>
-                <td><input type="checkbox"></td>
-            </tr>                                                      
+                <td>Irvan</td>
+                <td><input type="checkbox" id="checkbox-beras131"></td>
+                <td><input type="checkbox" id="checkbox-beras132"></td>
+                <td><input type="checkbox" id="checkbox-beras133"></td>
+                <td><input type="checkbox" id="checkbox-beras134"></td>
+                <td><input type="checkbox" id="checkbox-beras135"></td>
+                <td><input type="checkbox" id="checkbox-beras135"></td>
+            </tr>
+            <tr>
+                <td>Joshua</td>
+                <td><input type="checkbox" id="checkbox-beras136"></td>
+                <td><input type="checkbox" id="checkbox-beras137"></td>
+                <td><input type="checkbox" id="checkbox-beras138"></td>
+                <td><input type="checkbox" id="checkbox-beras139"></td>
+                <td><input type="checkbox" id="checkbox-beras140"></td>
+                <td><input type="checkbox" id="checkbox-beras140"></td>
+            </tr>
+            <tr>
+                <td>Firdaus</td>
+                <td><input type="checkbox" id="checkbox-beras141"></td>
+                <td><input type="checkbox" id="checkbox-beras142"></td>
+                <td><input type="checkbox" id="checkbox-beras143"></td>
+                <td><input type="checkbox" id="checkbox-beras144"></td>
+                <td><input type="checkbox" id="checkbox-beras145"></td>
+                <td><input type="checkbox" id="checkbox-beras145"></td>
+            </tr>
+            <tr>
+                <td>Ubai</td>
+                <td><input type="checkbox" id="checkbox-beras146"></td>
+                <td><input type="checkbox" id="checkbox-beras147"></td>
+                <td><input type="checkbox" id="checkbox-beras148"></td>
+                <td><input type="checkbox" id="checkbox-beras149"></td>
+                <td><input type="checkbox" id="checkbox-beras150"></td>
+                <td><input type="checkbox" id="checkbox-beras150"></td>
+            </tr>
         </table>
     </div>
 </section>
-
+<!-- Menyambungkan file JavaScript -->
+<script src="btikacheck.js"></script>
 </body>
 </html>

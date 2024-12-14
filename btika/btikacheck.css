@@ -1,0 +1,60 @@
+/* Umum untuk seluruh halaman */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Setelan untuk kalender atau daftar piket */
+.schedule {
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+
+.calendar {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr); /* 7 kolom */
+    gap: 10px;
+    margin-top: 20px;
+}
+
+/* Tampilan masing-masing piket */
+.date {
+    background-color: #f1f1f1;
+    padding: 15px;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+    word-wrap: break-word;
+}
+
+/* Responsif untuk perangkat tablet */
+@media (max-width: 768px) {
+    .calendar {
+        grid-template-columns: repeat(4, 1fr); /* 4 kolom pada tablet */
+    }
+
+    .date {
+        font-size: 14px;
+        padding: 10px;
+    }
+}
+
+/* Responsif untuk perangkat dengan layar lebih kecil (smartphone) */
+@media (max-width: 480px) {
+    .calendar {
+        grid-template-columns: 1fr; /* 1 kolom untuk layar kecil */
+    }
+
+    .date {
+        font-size: 12px;
+        padding: 8px;
+    }
+
+    /* Menyesuaikan ukuran checkbox */
+    .date input[type="checkbox"] {
+        width: 20px;
+        height: 20px;
+    }
+}
